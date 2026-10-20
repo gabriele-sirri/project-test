@@ -2,11 +2,47 @@
 
 [![Github Codespace](https://img.shields.io/badge/open-GH_Codespaces-blue?logo=github)](https://codespaces.new/gabriele-sirri/statistical-data-analysis?quickstart=1)
 
-Hands-on lab module on ROOT, RooFit, RooStats and HistFactory, for experimental particle, neutrino, dark-matter and nuclear physics.
+Hands-on lab module on ROOT, RooFit, RooStats and HistFactory, for experimental particle and astroparticle physics.
+
+
+## Course structure
+
+Lab 1 - Roofit basics and likelihood fits
+
+Lab 2 - Fit diagnostics, MINUIT and validation
+
+Lab 3 - Systematics, covariance matrices and RooStats
+
+Lab 4 - HistFactory statistical models
+
+
+## Layout
+
+```
+.devcontainer/  environment.yml    the environment (Codespaces / conda)
+course/                            slides, notebooks for the current edition
+docs/                              installation guides
+examples/                          self-contained physics-inspired exercises and datasets
+third_party/                       material of the ROOT Project course (LGPL)
+archive/                           previous editions
+```
+
+- Start here: [`course/README.md`](course/README.md)
+- Use-cases: [`examples/README.md`](examples/README.md)
+- Previous edition (2025): [`archive/2025/`](archive/2025/)
+
+Course by G. Sirri - INFN Bologna. 
+
+The `third_party/root-cpp-course-roofit` files are copied from
+[`root-project/root-cpp-course`](https://github.com/root-project/root-cpp-course) (LGPL 2.1, see `ORIGIN.md`).
+
+
 
 ## Before the course: set up ROOT
 
-**Bring a laptop with a working ROOT** (Windows, Linux or macOS). If your laptop cannot run ROOT, use **GitHub Codespaces in a browser on the lab computers** (a free GitHub account is required: create it before the first lab).
+Students are encouraged to **bring a laptop with a working ROOT environment, preferably iwth Python and Jupyter support** (Windows, Linux or macOS).
+
+ If this is not possible, or if you cannot run ROOT, you can use  **GitHub Codespaces in a browser on the lab computers** (a free GitHub account is required: create it before the first lab).
 
 1. Install ROOT with the guides in [`docs/`](docs/):
    [Windows](docs/root_on_windows.md) · [Windows with WSL](docs/root_on_wsl.md) · [Binder](docs/root_on_binder.md) · [Google Colab](docs/root_on_colab.ipynb).
@@ -17,22 +53,3 @@ Hands-on lab module on ROOT, RooFit, RooStats and HistFactory, for experimental 
 **Codespaces quota:** the free plan gives 120 core-hours per month, i.e. **60 hours on a 2-core codespace** (and 15 GB of storage). A codespace keeps running after you close the browser until its idle timeout (30 minutes by default): **stop it from the Codespaces page when you finish**. Unused codespaces are deleted after 30 days. Students can get more free hours with the GitHub Student Developer Pack.
 
 Binder and Colab are fallback options: sessions are temporary, so download your notebooks before closing.
-
-## Layout
-
-```
-.devcontainer/  environment.yml    the environment (Codespaces / conda)
-course/                            slides, labs, optional material, team project
-examples/                          self-contained use-cases: physics, data, original exercise
-third_party/                       material of the ROOT Project course (LGPL)
-archive/                           previous editions
-```
-
-- Start here: [`course/README.md`](course/README.md)
-- Use-cases: [`examples/README.md`](examples/README.md)
-- Previous edition (2025): [`archive/2025/`](archive/2025/)
-
-Course by G. Sirri. 
-
-The `third_party/root-cpp-course-roofit` files are copied from
-[`root-project/root-cpp-course`](https://github.com/root-project/root-cpp-course) (LGPL 2.1, see `ORIGIN.md`).
