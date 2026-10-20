@@ -5,17 +5,6 @@
 Hands-on lab module on ROOT, RooFit, RooStats and HistFactory, for experimental particle and astroparticle physics.
 
 
-## Course structure
-
-Lab 1 - Roofit basics and likelihood fits
-
-Lab 2 - Fit diagnostics, MINUIT and validation
-
-Lab 3 - Systematics, covariance matrices and RooStats
-
-Lab 4 - HistFactory statistical models
-
-
 ## Layout
 
 ```
@@ -31,11 +20,22 @@ archive/                           previous editions
 - Use-cases: [`examples/README.md`](examples/README.md)
 - Previous edition (2025): [`archive/2025/`](archive/2025/)
 
-Course by G. Sirri - INFN Bologna. 
-
 The `third_party/root-cpp-course-roofit` files are copied from
 [`root-project/root-cpp-course`](https://github.com/root-project/root-cpp-course) (LGPL 2.1, see `ORIGIN.md`).
 
+
+## Course structure
+
+ - Lab 1 - Roofit basics and likelihood fits
+
+ - Lab 2 - Fit diagnostics, MINUIT and validation
+
+ - Lab 3 - Systematics, covariance matrices and RooStats
+
+ - Lab 4 - HistFactory statistical models
+
+
+Course by G. Sirri - INFN Bologna. 
 
 
 ## Before the course: set up ROOT
