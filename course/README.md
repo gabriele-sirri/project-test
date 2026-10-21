@@ -11,7 +11,7 @@ Four labs of four hours (9:00–13:00), two weeks apart. Tools: **ROOT, RooFit, 
 | — | Optional: RDataFrame + C++ JIT, convolution, CL$_s$ | — | `optional/` | … |
 
 ## How to start
-1. **Your own laptop with ROOT** is the default: guides in `docs/`, environment `environment.yml`, root README for details.
+1. **Your own laptop with ROOT** is the default: guides in [`docs/`](../docs), environment `environment.yml`, root README for details.
 2. **No working ROOT?** Use **GitHub Codespaces** in a browser on a lab computer (free GitHub account needed; badge in the root README).
 3. Run `python course/tools/check_setup.py`: every line must say PASS. Do it before Lab 1.
 4. Open `course/lab1/ex_A.ipynb`.

@@ -13,7 +13,6 @@ course/                            slides, notebooks for the current edition
 docs/                              installation guides and documentation
 examples/                          self-contained physics-inspired exercises and datasets
 third_party/                       material of the ROOT Project course (LGPL)
-archive/                           previous editions
 ```
 
 The `third_party/root-cpp-course-roofit` files are copied from
@@ -24,7 +23,7 @@ The `third_party/root-cpp-course-roofit` files are copied from
 
 - Start here: [`course/README.md`](course/README.md)
 - Use-cases: [`examples/README.md`](examples/README.md)
-- Previous edition (2025): [`archive/2025/`](archive/2025/)
+- Previous edition (2025): [`sda2025/`](https://github.com/gabriele-sirri/sda2025)
 
 
 ## Course structure
