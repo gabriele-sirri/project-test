@@ -55,3 +55,12 @@ Students are encouraged to **bring a laptop with a working ROOT environment, pre
 **Codespaces quota:** the free plan gives 120 core-hours per month, i.e. **60 hours on a 2-core codespace** (and 15 GB of storage). A codespace keeps running after you close the browser until its idle timeout (30 minutes by default): **stop it from the Codespaces page when you finish**. Unused codespaces are deleted after 30 days. Students can get more free hours with the GitHub Student Developer Pack.
 
 Binder and Colab are fallback options: sessions are temporary, so download your notebooks before closing.
+
+
+## License
+
+Code, notebooks, slides and exercise texts: MIT License (see [`LICENSE`](LICENSE)).
+
+Material in `third_party/`: LGPL 2.1, see the license in that folder.
+
+Data: each dataset keeps the license and terms of its original source, given in the README of each case in `examples/`. Datasets digitised by hand from published figures or simulated for teaching are approximate, are not official data releases, and the original publication must be cited.
