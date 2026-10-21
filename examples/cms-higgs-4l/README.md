@@ -1,6 +1,6 @@
 # CMS: $H\to ZZ^*\to 4\ell$
 
-**Field:** collider physics · **Used in:** Lab 4 (Exercise B) · Part of the labs: not available as a project case.
+**Field:** collider physics · **Used in:** Lab 4 (Exercise B)
 
 **Question.** Is there a signal at 125 GeV in the four-lepton mass spectrum? What is the signal strength, and what does a control region say about the $ZZ$ background?
 

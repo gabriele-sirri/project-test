@@ -49,18 +49,18 @@
 
 **\[DO\] slide 2 — Recap**
 
-**SAY:** First a short recap. Please discuss in pairs for two minutes. Question one: slice and profile likelihood. Which is wider, and why? Question two: in the on/off problem, where does the uncertainty on the background come from? Question three: your pull has an RMS of one point three. What does it tell you? Question four: does your project fit converge?
+**SAY:** First a short recap. Please discuss in pairs for two minutes. Question one: slice and profile likelihood. Which is wider, and why? Question two: in the on/off problem, where does the uncertainty on the background come from? Question three: your pull has an RMS of one point three. What does it tell you? Question four: which two notebooks of Lab 2 did you hand in? Did the toy loop converge for you?
 
 **Expected answers:**
 
 1. Profile is wider: nuisance parameters are re-fitted, so their uncertainty adds.
 2. From the control region: it is the Poisson uncertainty of n off, divided by tau.
 3. The errors are underestimated by thirty percent: the fit errors are too small.
-4. Collect the answers; note which teams have problems.
+4. Collect two or three answers. Note which notebook of Lab 2 was the hardest, and what students found unclear.
 
 **\[DO\] slide 3 — Schedule**
 
-**SAY:** Here is today's plan. Three talks, three hands-on parts, two breaks. The last twenty-five minutes are for your project. In the project, you add one systematic uncertainty. So please listen with your own case in mind.
+**SAY:** Here is today's plan. Three talks, three hands-on parts, two breaks. The last twenty-five minutes are an open lab: you finish a notebook, and I help you. Every systematic you will write today has a name, a source and a size. Please listen with these three words in mind.
 
 ---
 
@@ -201,25 +201,26 @@
 
 ---
 
-## 3:30 — Project: add a systematic (slide 22, 25 min)
+## 3:30 — Open lab (slide 22, 25 min)
 
-**SAY:** Now the project. Choose one systematic in your case. Write it as a nuisance parameter. Give it a name, a source, and a size you can justify. \[PAUSE\] Compute your main result with and without it. And answer one question: does it change your conclusion? **That sentence goes into your showcase, as the caveat.** I walk around.
+**SAY:** Now twenty-five minutes of open lab. Finish a notebook, or start the one you have not done. The three notebooks of today are independent. \[PAUSE\] For every systematic you write, ask three questions. Is it an auxiliary measurement, or a constraint term? What is the source, and what size can you justify? And how much does the result change, with and without it? **If the answer is almost nothing, write it in your notebook. That is a result.** I walk around.
 
-*IT: una sistematica come nuisance, con nome, sorgente, taglia; risultato con e senza.*
+*IT: lab aperto; una sistematica = nome, sorgente, taglia; risultato con e senza; "quasi nulla" è un risultato.*
 
-**Questions to ask each team:**
+**Questions to ask each student:**
 
-- Which systematic did you choose, and why?
-- Is it an auxiliary measurement or a constraint?
+- Which notebook are you on? Which two will you hand in?
+- Is this systematic an auxiliary measurement or a constraint?
 - How big is the change on your result?
+- In Exercise C: which are the global observables, and which are the nuisance parameters?
 
 ---
 
 ## 3:55 — Wrap-up (slide 23, 5 min)
 
-**SAY:** Let's finish. Today you learned three things. First, constraint terms and auxiliary measurements, and the global observables. Second, RooStats: the ModelConfig, the hypothesis test, the profile interval, and the Asimov formula. Third, correlated systematics, covariance, diagonalisation, and rank. \[PAUSE\] For Lab 4: finish the exercises. Bring your project model with your systematic, and the result with and without it. And read the HistFactory section in the ROOT manual. \[PAUSE\] **In Lab 4 we build a binned model with HistFactory, and you present your work.** Thank you. See you in two weeks.
+**SAY:** Let's finish. Today you learned three things. First, constraint terms and auxiliary measurements, and the global observables. Second, RooStats: the ModelConfig, the hypothesis test, the profile interval, and the Asimov formula. Third, correlated systematics, covariance, diagonalisation, and rank. \[PAUSE\] For Lab 4: hand in two of the three notebooks on Virtuale. The solutions of all three appear after the deadline. And read the HistFactory section in the ROOT manual. \[PAUSE\] **In Lab 4 we build a binned model with HistFactory, we use RDataFrame, and we finish with a demo of TMVA.** Thank you. See you in two weeks.
 
-*IT: 3 cose, compiti, anteprima Lab 4 e showcase.*
+*IT: 3 cose, compiti (2 notebook su 3 su Virtuale, lettura HistFactory), anteprima Lab 4: HistFactory, RDataFrame, demo TMVA.*
 
 ---
 
@@ -242,7 +243,7 @@
 
 - Exercise C (OPERA) builds a model with many nuisance parameters. On a 2-core codespace it can take a few minutes: tell the students before they start.
 - If a student sees a crash in RooStats on their own laptop, ask for the ROOT version. Compare it with the one in the Codespace, and suggest to continue in the Codespace.
-- Students working in Codespaces download the notebooks to hand in.
+- Students working in Codespaces download the notebooks and upload them on Virtuale.
 
 | Situation | Say | IT |
 | --- | --- | --- |

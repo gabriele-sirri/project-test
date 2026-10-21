@@ -21,7 +21,7 @@
 | Check | What do you see in the output? | Cosa vedete nell'output? |
 | Stuck | Which cell fails? Please read me the error. | Quale cella fallisce? Leggetemi l'errore |
 | Time left | You have five more minutes. | Cinque minuti ancora |
-| Teams | Team by team, tell me where you are with the project. | Ogni team dice a che punto è |
+| Open lab | Tell me which notebook you are working on. | Dite su quale notebook state lavorando |
 
 ## Pronunciation help
 
@@ -47,13 +47,13 @@
 
 ## 0:00 — Recap (slides 1–3, 10 min)
 
-**SAY (slide 1):** Good morning, and welcome back. This is Lab 2: likelihood and fit quality. In Lab 1 we built models and we fitted them. Today we open the box. We want to understand what the fit really does, how much we can trust the errors, and how to test a fit. \[PAUSE\] Then we use it for your projects.
+**SAY (slide 1):** Good morning, and welcome back. This is Lab 2: likelihood and fit quality. In Lab 1 we built models and we fitted them. Today we open the box. We want to understand what the fit really does, how much we can trust the errors, and how to test a fit. \[PAUSE\] Then we validate it with toys.
 
 *IT: bentornati, oggi apriamo la scatola nera del fit.*
 
 **\[DO\] slide 2 — Recap**
 
-**SAY:** First, a short recap. Four questions. Please discuss in pairs, for two minutes. \[PAUSE\] Question one: in the marked Poisson model, which factor is the rate, and which is the shape? Question two: extended fit, or fit with fractions. What information do we lose with fractions? Question three: why is a binned likelihood not a chi-square fit? Question four: which team and which case did you choose?
+**SAY:** First, a short recap. Four questions. Please discuss in pairs, for two minutes. \[PAUSE\] Question one: in the marked Poisson model, which factor is the rate, and which is the shape? Question two: extended fit, or fit with fractions. What information do we lose with fractions? Question three: why is a binned likelihood not a chi-square fit? Question four: which two notebooks of Lab 1 did you hand in, and which cell was the hardest?
 
 **After two minutes, SAY:** Let's compare. Question one? \[PAUSE\]
 
@@ -62,13 +62,13 @@
 1. Rate = Poisson term for n. Shape = product of the densities.
 2. With fractions we lose the total yield: the rate.
 3. The binned likelihood is Poisson in each bin: exact also with few or zero counts. Chi-square assumes Gaussian errors.
-4. Collect the teams. Write them on the board. **Remind them: register in teams dot md.**
+4. Collect two or three answers. Note the hardest cells on the board: they tell you what to repeat today. Remind them of the rule: two notebooks out of three.
 
-*IT: 4 domande, risposte attese sopra. Segna i team alla lavagna.*
+*IT: 4 domande, risposte attese sopra. Segna alla lavagna le celle più difficili del Lab 1.*
 
 **\[DO\] slide 3 — Schedule**
 
-**SAY:** This is our plan. Three talks, three hands-on parts, two breaks. At the end, thirty minutes for your project. \[PAUSE\] Please do not skip the project time: it is the most useful time for you.
+**SAY:** This is our plan. Three talks, three hands-on parts, two breaks. At the end, thirty minutes of open lab, to finish a notebook with me. \[PAUSE\] Please do not skip it: it is the most useful time for you.
 
 ---
 
@@ -166,7 +166,7 @@
 - Check: b hat should be about three point eight.
 - Is the profile the same as MINOS? It should be.
 
-**At the end (SAY):** Let's compare. With tau equal to ten, profile and slice are almost the same. \[PAUSE\] With the poor control region, the profile is wider. **This is exactly the cost of not knowing the background.** \[PAUSE\] Question: in your project, what is your control region?
+**At the end (SAY):** Let's compare. With tau equal to ten, profile and slice are almost the same. \[PAUSE\] With the poor control region, the profile is wider. **This is exactly the cost of not knowing the background.** \[PAUSE\] Question: in the notebooks you are working on, where is the control region, and what does it tell you about the background?
 
 ---
 
@@ -211,26 +211,26 @@
 
 ---
 
-## 3:25 — Project time (slide 22, 30 min)
+## 3:25 — Open lab (slide 22, 30 min)
 
-**SAY:** Now the project. For thirty minutes, you work in your teams. \[PAUSE\] By the end of today, every team should have three things: the data read in, a first model and a first fit, and the HESSE and MINOS errors on the main parameter. And one note in the notebook: what would break this fit? \[PAUSE\] I walk around. Please call me early.
+**SAY:** Now thirty minutes of open lab. \[PAUSE\] Work on the notebook you have not finished. If you have finished, look at the third one: the solutions come later. All the notebooks of today are independent, so you can start from any. Run it from the top, and check that every check says PASS. \[PAUSE\] I walk around. Please call me early.
 
-*IT: 30 minuti di lavoro di team. Gira tra i gruppi. Chiedi a ciascuno: dati letti? primo fit? HESSE vs MINOS?*
+*IT: 30 minuti di lab aperto. Gira tra i banchi. Chiedi: su quale notebook sei? Converge? HESSE e MINOS cosa dicono?*
 
-**Questions to ask each team:**
+**Questions to ask each student:**
 
-- Which case do you have? Where are the data?
-- Do you have a first fit? Does it converge?
-- What is your parameter of interest? And your nuisance parameters?
-- What would break your fit?
+- Which notebook are you on? Which two will you hand in?
+- Does the fit converge? What does the status say?
+- HESSE or MINOS: which error do you trust here, and why?
+- What would break this fit?
 
 ---
 
 ## 3:55 — Wrap-up (slide 23, 5 min)
 
-**SAY:** Let's finish. \[PAUSE\] Today you learned three things. First, what the fit does: the likelihood, MIGRAD, HESSE, MINOS. Second, the profile likelihood, and why nuisance parameters make intervals wider. Third, toys: pulls, bias and coverage. \[PAUSE\] For the next lab, in two weeks: finish the exercises. The solutions appear after the deadline. For your project, add one systematic as a nuisance parameter. And please read the first two sections of the paper by Cowan, Cranmer, Gross and Vitells. The reference is on the slide. \[PAUSE\] **In Lab 3 we model systematic uncertainties, we use RooStats, and we study a real problem with correlated uncertainties.** Thank you very much. See you in two weeks.
+**SAY:** Let's finish. \[PAUSE\] Today you learned three things. First, what the fit does: the likelihood, MIGRAD, HESSE, MINOS. Second, the profile likelihood, and why nuisance parameters make intervals wider. Third, toys: pulls, bias and coverage. \[PAUSE\] For the next lab, in two weeks: hand in two of the three notebooks, the ones you prefer, on Virtuale. The solutions of all three appear after the deadline. And please read the first two sections of the paper by Cowan, Cranmer, Gross and Vitells. The reference is on the slide. \[PAUSE\] **In Lab 3 we model systematic uncertainties, we use RooStats, and we study a real problem with correlated uncertainties.** Thank you very much. See you in two weeks.
 
-*IT: 3 cose imparate; compiti: esercizi, 1 sistematica nel progetto, leggere Cowan et al. (sez. 1-2). Anteprima Lab 3.*
+*IT: 3 cose imparate; compiti: consegnare 2 notebook su 3 su Virtuale, leggere Cowan et al. (sez. 1-2). Anteprima Lab 3.*
 
 ---
 
@@ -253,7 +253,7 @@
 
 - Ask who used Codespaces in Lab 1 and whether the quota is enough. Remind them to stop the codespace when they finish.
 - The toy loop of Exercise C takes about a minute. On a slow laptop or a 2-core codespace it can take longer: suggest 200 toys instead of 300.
-- If a student works in Codespaces, they download the notebooks to hand in.
+- If a student works in Codespaces, they download the notebooks and upload them on Virtuale.
 
 | Situation | Say | IT |
 | --- | --- | --- |

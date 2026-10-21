@@ -1,6 +1,6 @@
 # OPERA: $\nu_\tau$ appearance
 
-**Field:** neutrino physics · **Used in:** Lab 3 (Exercise C) · Part of the labs: not available as a project case.
+**Field:** neutrino physics · **Used in:** Lab 3 (Exercise C)
 
 **Question.** Four decay channels of the $\tau$, ten candidates. How significant is the excess, and what is the signal strength $\mu$ when systematic uncertainties are shared between channels?
 

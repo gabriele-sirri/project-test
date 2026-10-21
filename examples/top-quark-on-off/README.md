@@ -1,6 +1,6 @@
 # Top quark: on/off counting
 
-**Field:** collider · **Used in:** Lab 2 (Exercise B), Lab 3 (Exercises A and B) · Part of the labs: not available as a project case.
+**Field:** collider · **Used in:** Lab 2 (Exercise B), Lab 3 (Exercises A and B)
 
 **Question.** 17 events are observed in the signal region. A control region measures the background. What is the significance, and what is the interval on the signal?
 

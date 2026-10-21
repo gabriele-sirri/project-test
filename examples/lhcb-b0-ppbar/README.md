@@ -1,6 +1,6 @@
 # LHCb: $B^0 \to p\bar p$
 
-**Field:** flavour physics · **Used in:** Lab 1 (Exercises B and C), Lab 2 (Exercises A and C) · Part of the labs: not available as a project case.
+**Field:** flavour physics · **Used in:** Lab 1 (Exercises B and C), Lab 2 (Exercises A and C)
 
 **Question.** Is there a signal in the proton–antiproton invariant mass over a combinatorial background, and how many events?
 

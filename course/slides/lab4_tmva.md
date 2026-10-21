@@ -3,7 +3,7 @@ marp: true
 theme: default
 paginate: true
 math: katex
-header: "Optional — TMVA demo"
+header: "Lab 4 — Talk C and demo: TMVA"
 style: |
   section { font-size: 26px; }
   section.lead h1 { font-size: 46px; }
@@ -13,7 +13,7 @@ style: |
 <!-- _class: lead -->
 <!-- _paginate: false -->
 # Selecting events: the physicist's way
-**Optional demo (30–45 min)** · TMVA, MAGIC data, Asimov significance
+**Lab 4 · Talk C (20 min) and guided demo (35 min)** · TMVA, MAGIC data, Asimov significance
 
 ---
 
@@ -86,7 +86,7 @@ $$Z_A=\sqrt{2\Big[(s+b)\ln\Big(1+\frac{s}{b}\Big)-s\Big]}\;\le\;\frac{s}{\sqrt b
 4. Scan the cut: $\varepsilon_s$, $\varepsilon_b$, purity, $s/\sqrt b$, $Z_A$
 5. Find the optimal cut for two sets of expected yields: **it moves**
 
-Notebook: `course/optional/tmva_magic_demo.ipynb`
+Notebook: `course/lab4/demo_C_tmva.ipynb` (guided demo, not handed in)
 
 ---
 

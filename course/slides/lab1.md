@@ -19,16 +19,17 @@ G. Sirri · Hands-on sessions, 9:00–13:00
 
 ---
 
-# Roadmap: 4 labs, one project
+# Roadmap: 4 labs, one analysis chain
 
-| Lab | Topic | Project milestone |
+| Lab | Topic | What you hand in |
 |---|---|---|
-| **1** | Data model, RooFit, fits | **Announce.** Pick a case and a team |
-| **2** | Likelihood, MINUIT, nuisance parameters | Baseline fit of your case |
-| **3** | Systematics, RooStats, correlated uncertainties | Add one systematic + inference |
-| **4** | HistFactory, RDataFrame `Vary`, showcases | **3–5 min team showcase** |
+| **1** | Data model, RooFit, fits | **2 of 3** notebooks (A, B, C) |
+| **2** | Likelihood, MINUIT, toys, nuisance parameters | **2 of 3** notebooks |
+| **3** | Systematics, RooStats, correlated uncertainties | **2 of 3** notebooks |
+| **4** | HistFactory, RDataFrame `Vary`, TMVA | **both** notebooks (A, B) |
 
-- Labs are **two weeks apart**: tutorial + project step between labs
+- Labs are **two weeks apart**: finish your notebooks between labs
+- You choose which 2 of the 3 to hand in. We work on **all** of them in class, and solutions are published for all
 - Each lab: 3 × (short talk → hands-on), 2 breaks
 - Tools: **ROOT / RooFit / RooStats**, Python first, modern C++ when it matters
 
@@ -45,8 +46,8 @@ G. Sirri · Hands-on sessions, 9:00–13:00
 | 10:55 | Hands-on B: lifetime + LHCb $B^0$ mass |
 | 11:50 | **Break (10 min)** |
 | 12:00 | Talk C: composite models, extended fits |
-| 12:15 | Hands-on C: signal + background, project kick-off |
-| 12:50 | Wrap-up and homework |
+| 12:15 | Hands-on C: signal + background |
+| 12:50 | Wrap-up and hand-in rules |
 
 ---
 
@@ -287,7 +288,7 @@ h  = df.Histo1D(("h", ";m;events", 100, 100, 150), "m")
 
 <!-- _class: lead -->
 # Hands-on C
-## Signal + background, and the project
+## Signal + background
 
 ---
 
@@ -300,30 +301,13 @@ Report $N_s$, $N_b$ with errors. Plot with the components and the pulls.
 **C2. Same exercise, shape-only (fractions)**
 What happened to the information on the total yield?
 
+**Questions C.** Which error is larger, and why? When would you *need* the rate? Is the signal significant? (Compare $N_s$ with its error: no p-value yet, we do it in Lab 3.)
+
 **C4. (optional, 10 min)** Count the events in a mass window with `RDataFrame` and a **C++ function** (JIT).
 
-**C3. Project kick-off (last 15 min)**
-Open `course/project/README.md`, read the menu, **form teams of 2–3** and choose a case.
-
 ---
 
-# Project menu (preview)
-
-| Case | Field | Core of the analysis |
-|---|---|---|
-| CUORE-0 | nuclear | peak + background, upper limit |
-| IceCube | neutrino | oscillation parameters, intervals |
-| MINOS | neutrino | oscillations from an energy spectrum |
-| MAGIC | astroparticle | $\gamma$/hadron selection, significance |
-| ENUBET test beam | beam instrumentation | composite model with convolution |
-| **your own case** | any | one-page proposal by Lab 2 |
-
-The cases of the labs (LHCb, top-quark on/off, OPERA, CMS $H\to4\ell$) are **not** project cases: you see them in class.
-You will present **one figure, one number, one caveat** in Lab 4 (3–5 minutes).
-
----
-
-# Wrap-up and homework (before Lab 2, in 2 weeks)
+# Wrap-up and hand-in (before Lab 2, in 2 weeks)
 
 **Today you learned**
 - the marked Poisson model: rate × shape
@@ -331,9 +315,11 @@ You will present **one figure, one number, one caveat** in Lab 4 (3–5 minutes)
 - unbinned vs binned likelihood, extended fits
 
 **By Lab 2**
-1. Finish the exercises (notebooks in `lab1/`); solutions appear after the deadline
-2. Choose your project case and team (fill `course/project/teams.md`)
+1. Hand in **2 of the 3** notebooks of `lab1/` (A, B, C: your choice), run top to bottom with every check `PASS`
+2. Upload them on **Virtuale**
 3. Read *Practical Statistics for the LHC*, sections on likelihood and nuisance parameters
 4. Open your Codespace once, to confirm it still works
+
+Solutions of all three notebooks appear after the deadline.
 
 **Next time:** MINUIT, $-\ln L$ scans, profile likelihood, nuisance parameters.

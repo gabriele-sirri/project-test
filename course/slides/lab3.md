@@ -26,7 +26,7 @@ Discuss in pairs, then we compare:
 1. Slice vs profile likelihood: which is wider, and why?
 2. In the on/off problem, where does the uncertainty on the background come from?
 3. What does a pull RMS of 1.3 tell you?
-4. Does your project fit converge? Which parameter is hardest to fit?
+4. Which two Lab 2 notebooks did you hand in? Did the toy loop converge for you?
 
 ---
 
@@ -34,7 +34,7 @@ Discuss in pairs, then we compare:
 
 | Time | |
 |---|---|
-| 9:00 | Recap and project check |
+| 9:00 | Recap and Lab 2 questions |
 | 9:10 | Talk A: constraints vs auxiliary measurements |
 | 9:30 | Hands-on A: on/off with a Gaussian constraint |
 | 10:10 | **Break (15 min)** |
@@ -43,7 +43,7 @@ Discuss in pairs, then we compare:
 | 11:25 | **Break (10 min)** |
 | 11:35 | Talk C: correlated systematics |
 | 11:50 | Hands-on C: a real problem, OPERA |
-| 12:30 | Project: add a systematic |
+| 12:30 | Open lab: finish a notebook, ask questions |
 | 12:55 | Wrap-up |
 
 ---
@@ -261,19 +261,21 @@ Notebook: `course/lab3/ex_C.ipynb`
 
 ---
 
-# Project: add a systematic (25 min)
+# Open lab (25 min)
 
-Choose **one** systematic in your case and write it as a **nuisance parameter**:
+Finish a notebook, or start the one you have not done. The three of today are independent.
 
-- an auxiliary measurement, or a constraint term
-- named, with a **source** and a size you can justify
-- the effect on your main result: **with and without** it
+For every systematic you write, ask three questions:
 
-Then decide: does it change your conclusion? That sentence goes into your showcase as the **caveat**.
+- is it an **auxiliary measurement** or a **constraint term**?
+- what is its **source**, and what size can you justify?
+- how much does the result change **with and without** it?
+
+If the answer to the last one is "almost nothing", say it in your notebook: that is a result.
 
 ---
 
-# Wrap-up and homework (before Lab 4, in 2 weeks)
+# Wrap-up and hand-in (before Lab 4, in 2 weeks)
 
 **Today you learned**
 - constraint term vs auxiliary measurement, global observables
@@ -281,8 +283,8 @@ Then decide: does it change your conclusion? That sentence goes into your showca
 - correlated systematics: covariance, diagonalisation, rank
 
 **By Lab 4**
-1. Finish the exercises (solutions after the deadline)
-2. Project: model with your systematic, result **with and without** it
+1. Hand in **2 of the 3** notebooks of `lab3/` (A, B, C: your choice) on **Virtuale**, every check `PASS`
+2. Solutions of all three appear after the deadline
 3. Read the HistFactory section of the ROOT manual (`root.cern/manual/roofit/`) and look at `third_party/root-cpp-course-roofit/README.md`
 
-**Next time:** HistFactory, the anatomy of a binned likelihood, and your showcase.
+**Next time:** HistFactory, the anatomy of a binned likelihood, RDataFrame `Vary`, and a TMVA demo.

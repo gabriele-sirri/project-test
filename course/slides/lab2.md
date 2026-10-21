@@ -26,7 +26,7 @@ Discuss in pairs, then we compare:
 1. In the marked Poisson model, which factor is the **rate** and which the **shape**?
 2. Extended fit vs fit with fractions: what information is lost with fractions?
 3. A binned likelihood is **not** a $\chi^2$ fit. Why does it matter for low counts?
-4. Which team and which case did you choose for the project?
+4. Which two Lab 1 notebooks did you hand in? Which cell was the hardest?
 
 ---
 
@@ -34,7 +34,7 @@ Discuss in pairs, then we compare:
 
 | Time | |
 |---|---|
-| 9:00 | Recap and project check |
+| 9:00 | Recap and Lab 1 questions |
 | 9:10 | Talk A: what happens in `fitTo` |
 | 9:30 | Hands-on A: anatomy of a fit |
 | 10:15 | **Break (15 min)** |
@@ -43,7 +43,7 @@ Discuss in pairs, then we compare:
 | 11:35 | **Break (10 min)** |
 | 11:45 | Talk C: validate with toys |
 | 12:00 | Hands-on C: pulls, bias, coverage |
-| 12:25 | Project: baseline fit |
+| 12:25 | Open lab: finish a notebook, ask questions |
 | 12:55 | Wrap-up |
 
 ---
@@ -256,20 +256,19 @@ Notebook: `course/lab2/ex_C.ipynb`
 
 ---
 
-# Project: baseline fit (30 min)
+# Open lab (30 min)
 
-By the end of today, every team has:
+Work on the notebook you have not finished, or on the third one if you want to see it before the solutions.
 
-- the data of its case **read in** (RDataFrame or numpy → RooFit)
-- a first **model** and a first **fit**
-- the **HESSE vs MINOS** errors on the main parameter
-- a note in the notebook: *what would break this fit?*
+- Every notebook of today is **independent**: pick any
+- Ask yourself, for each fit: *what would break it?*
+- Run the notebook top to bottom: every check must say `PASS`
 
-Ask for help early. Use the break to ask.
+Ask for help early. I walk around.
 
 ---
 
-# Wrap-up and homework (before Lab 3, in 2 weeks)
+# Wrap-up and hand-in (before Lab 3, in 2 weeks)
 
 **Today you learned**
 - what `fitTo` does: NLL, MIGRAD, HESSE, MINOS
@@ -277,8 +276,8 @@ Ask for help early. Use the break to ask.
 - toys, pulls, bias and coverage
 
 **By Lab 3**
-1. Finish the exercises (solutions after the deadline)
-2. Project: add **one systematic** as a nuisance parameter
+1. Hand in **2 of the 3** notebooks of `lab2/` (A, B, C: your choice) on **Virtuale**, every check `PASS`
+2. Solutions of all three appear after the deadline
 3. Read Cowan, Cranmer, Gross, Vitells, *Asymptotic formulae for likelihood-based tests of new physics* (arXiv:1007.1727), Sections 1–2
 
 **Next time:** constraints and auxiliary measurements, RooStats, correlated systematics (a real problem: OPERA).

@@ -21,7 +21,7 @@
 | Did not understand | Sorry, could you repeat the question? | Puoi ripetere la domanda? |
 | Not sure | Good question. I will check and answer next time. | Controllo e rispondo la prossima volta |
 | Later | We will see this in Lab 2. | Lo vediamo nel Lab 2 |
-| Teams | Please work in pairs, or in teams of three. | Lavorate in coppie o terne |
+| Choose | Choose two of the three notebooks. | Scegliete 2 notebook su 3 |
 | Time | You have fifteen minutes. | Avete quindici minuti |
 | Help | Raise your hand and I will come to you. | Alzate la mano e vengo |
 | Look | Please look at the screen. | Guardate lo schermo |
@@ -64,9 +64,9 @@
 
 **\[DO\] slide 2 — Roadmap**
 
-**SAY:** Here is the plan. We have four labs, one every two weeks. Between the labs you do a short tutorial at home. And there is one project, in teams. \[PAUSE\] I announce the project today, because I want you to think about it for two weeks. In Lab 1 we learn to build a model. In Lab 2 we study the likelihood and the MINUIT minimiser. In Lab 3 we study systematic uncertainties, RooStats, and a real problem with correlated uncertainties. In Lab 4 we use HistFactory, and every team shows its work. **Every lab has the same rhythm: a short talk, then hands-on work. Three times, with two breaks.**
+**SAY:** Here is the plan. We have four labs, one every two weeks. Between the labs you finish your notebooks at home, and you hand them in. \[PAUSE\] The rule is simple: in each of Labs 1, 2 and 3 there are three notebooks, A, B and C. You hand in two of them, the ones you prefer. In Lab 4 there are two notebooks, and you hand in both. We work on all of them in class, and I publish all the solutions. So you will not miss anything. In Lab 1 we learn to build a model. In Lab 2 we study the likelihood and the MINUIT minimiser. In Lab 3 we study systematic uncertainties, RooStats, and a real problem with correlated uncertainties. In Lab 4 we use HistFactory and RDataFrame, and we finish with a demo of TMVA. **Every lab has the same rhythm: a short talk, then hands-on work. Three times, with two breaks.**
 
-*IT: 4 lab, uno ogni 2 settimane, tutorial a casa, progetto annunciato oggi, contenuti dei 4 lab, ritmo talk + hands-on.*
+*IT: 4 lab, uno ogni 2 settimane; consegna di 2 notebook su 3 nei Lab 1-3 e di entrambi nel Lab 4; si lavora su tutti in aula, soluzioni per tutti; contenuti dei 4 lab, ritmo talk + hands-on.*
 
 **\[DO\] slide 3 — Today's schedule**
 
@@ -220,39 +220,34 @@
 
 ---
 
-## 3:10 — Hands-on C and project (slides 20–22, 40 min)
+## 3:10 — Hands-on C (slides 20–21, 40 min)
 
 **\[DO\] slide 21 — Exercise C**
 
-**SAY:** Exercise C1 uses the LHCb rare decay, B zero to proton anti-proton. The file is in the data folder. Please fit a Gaussian for the signal, plus an exponential for the background. Use an extended fit. Report the number of signal events and the number of background events, with errors. Plot the components and the pulls. \[PAUSE\] Exercise C2: do the same with fractions, shape-only. What happened to the information on the total yield? **Think about this: the rate is gone.** You have about twenty minutes. If you finish early, step C4 is optional: count the events in a mass window with a C++ function, compiled just in time.
+**SAY:** Exercise C1 uses the LHCb rare decay, B zero to proton anti-proton. The file is in the data folder. Please fit a Gaussian for the signal, plus an exponential for the background. Use an extended fit. Report the number of signal events and the number of background events, with errors. Plot the components and the pulls. \[PAUSE\] Exercise C2: do the same with fractions, shape-only. What happened to the information on the total yield? **Think about this: the rate is gone.** You have about thirty minutes. If you finish early, step C4 is optional: count the events in a mass window with a C++ function, compiled just in time.
 
 *IT: C1 estesa, C2 con frazioni, domanda sul rate perso.*
 
-**\[DO\] slide 22 — Project menu (at 12:30)**
-
-**SAY:** Now the project. \[PAUSE\] You will work in teams of two or three. Please look at the table. We have five cases, from different fields: nuclear physics, neutrinos, astroparticle physics, and beam instrumentation. You can also propose your own case, with a one-page proposal by Lab 2. Each case has its own data. In Lab 4, each team presents one figure, one number, and one caveat, in three to five minutes. \[PAUSE\] A caveat is a limitation: something your result does not tell us. **We do not need slides. A good plot and a clear explanation are enough.** Between now and Lab 2, please choose your team and your case. Write your names in the file teams dot md.
-
-*IT: annuncio progetto, 6 casi, team di 2-3, presentazione 3-5 min (figura, numero, caveat), scegliere entro il Lab 2.*
-
 **If students ask:**
 
-- Is it graded? — It is part of your work in the course. You will also discuss it at the exam.
-- Can I work alone? — Yes, but teams are better. Talk to me.
-- Can we propose our own case? — Yes, if you have data. Please talk to me first.
+- Which two notebooks should I choose? — Your choice. I suggest the ones where you felt less sure, because that is where you learn most. The solutions of the third one are there too.
+- Can I hand in all three? — Yes, I read them with pleasure, but two are enough.
+- Is it graded? — No grade: the outcome is "work done", and it gives access to the written exam.
+- A check says FAIL. What do I do? — A FAIL means the notebook stops. Fix the cell, or come to my office hours before the deadline.
 
 ---
 
-## 3:50 — Wrap-up (slide 23, 10 min)
+## 3:50 — Wrap-up (slide 22, 10 min)
 
-**SAY:** Let's finish. \[PAUSE\] Today you learned three things. First, the marked Poisson model: rate times shape. Second, the RooFit objects: variable, pdf, dataset, frame. Third, unbinned and binned likelihoods, and extended fits. \[PAUSE\] For the next lab, in two weeks, please do four things. One: finish the exercises in the notebooks. The solutions will appear after the deadline. Two: choose your project case and your team. Three: read the sections on likelihood and nuisance parameters in Cranmer's paper. Four: open your Codespace once, to check that it still works. \[PAUSE\] **In Lab 2 we open the box: what really happens when we call fitTo.** We will study MINUIT, the likelihood scan, and the nuisance parameters. Thank you very much. See you in two weeks.
+**SAY:** Let's finish. \[PAUSE\] Today you learned three things. First, the marked Poisson model: rate times shape. Second, the RooFit objects: variable, pdf, dataset, frame. Third, unbinned and binned likelihoods, and extended fits. \[PAUSE\] For the next lab, in two weeks, please do four things. One: finish your two notebooks, the ones you choose, and check that every check says PASS. Two: upload them on Virtuale before the deadline. The solutions of all three notebooks will appear after the deadline. Three: read the sections on likelihood and nuisance parameters in Cranmer's paper. Four: open your Codespace once, to check that it still works. \[PAUSE\] **In Lab 2 we open the box: what really happens when we call fitTo.** We will study MINUIT, the likelihood scan, and the nuisance parameters. Thank you very much. See you in two weeks.
 
-*IT: 3 cose imparate, 4 compiti, anteprima Lab 2. Saluti.*
+*IT: 3 cose imparate, 4 compiti (finire 2 notebook, caricarli su Virtuale, lettura, aprire il Codespace), anteprima Lab 2. Saluti.*
 
 ---
 
 ## Emergency notes
 
-- **Running late?** Skip B2 (do at home) and shorten the RDataFrame slide. Never skip the project announcement.
+- **Running late?** Skip B2 (do at home) and shorten the RDataFrame slide. Never skip the explanation of the hand-in rule (2 notebooks out of 3).
 - **Codespaces not working?** Say: Please use SWAN, or the shared notebook link. We fix your installation after class.
 - **A student asks something very hard?** Say: That is an excellent question. It goes beyond today. Let's discuss it after class, or in Lab 2.
 - **Silence after a question?** Wait ten seconds. Then rephrase: Let me ask in a different way.
@@ -281,10 +276,10 @@ Dear students, for the labs please bring a laptop with a working ROOT installati
 | Fallback | Please use Codespaces in your browser. | Usate Codespaces nel browser |
 | Account | You need a free GitHub account. | Serve un account GitHub gratuito |
 | Stop | Please stop the codespace when you finish. | Fermate il codespace a fine lavoro |
-| Hand-in | Please download your notebook before you leave. | Scaricate il notebook |
+| Hand-in | Please download your notebook and upload it on Virtuale. | Scaricate il notebook e caricatelo su Virtuale |
 
 ### Notes for you
 
 - Before the course, open a Codespace yourself from a lab computer. Check that the browser and the network work.
 - A Codespace consumes the free monthly quota of the student while it is running. Remind them to stop it. The free plan gives 120 core-hours per month: 60 hours on a 2-core codespace. Closing the browser does not stop the codespace: it runs until the idle timeout, 30 minutes by default. Ask them to stop it from the Codespaces page.
-- In Codespaces the files stay in the student's codespace. To hand in, they download the notebook.
+- In Codespaces the files stay in the student's codespace. To hand in, they download the notebook and upload it on Virtuale.

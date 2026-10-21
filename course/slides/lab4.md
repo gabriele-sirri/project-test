@@ -25,7 +25,7 @@ G. Sirri · Hands-on sessions, 9:00–13:00
 2. A source of systematic uncertainty moves three channels. How many nuisance parameters do you need?
 3. Which tool for a discovery, which for an upper limit?
 
-Today ends with **your showcase**.
+Today closes the chain: **binned models**, and a first look at **event selection** with TMVA.
 
 ---
 
@@ -40,9 +40,10 @@ Today ends with **your showcase**.
 | 10:15 | Talk B: RDataFrame `Vary` and modern C++ |
 | 10:30 | Hands-on B: HistFactory on CMS $H\to4\ell$ |
 | 11:05 | **Break (10 min)** |
-| 11:15 | Project: last 20 minutes |
-| 11:35 | **Showcases** (3–5 min per team) |
-| 12:50 | Wrap-up and feedback |
+| 11:15 | Talk C: selecting events with TMVA (slides `lab4_tmva.md`) |
+| 11:35 | Guided demo C: BDT, efficiency, Asimov significance |
+| 12:10 | Open lab: finish A and B, ask questions |
+| 12:45 | Wrap-up and feedback |
 
 ---
 
@@ -198,17 +199,6 @@ Notebook: `course/lab4/ex_B.ipynb`
 
 ---
 
-# Showcase: one figure, one number, one caveat (3–5 min)
-
-- **One figure** from your notebook, readable from the back of the room
-- **One number**: your main result with its uncertainty, and its meaning
-- **One caveat**: the most important limitation, usually your systematic
-- Say **who did what**. Every team member speaks
-
-Order: by lottery. Questions: one per team, from another team.
-
----
-
 # Wrap-up and feedback
 
 **You can now**
@@ -216,9 +206,12 @@ Order: by lottery. Questions: one per team, from another team.
 - fit it, validate it with toys, and make statements with RooStats
 - read a HistFactory workspace and a published statistical model
 
+**Hand-in**
+- Lab 4: **both** notebooks (A and B), on **Virtuale**
+- In total: 2 of 3 notebooks in each of Labs 1–3, plus A and B of Lab 4
+- Solutions of all labs appear after the deadline
+
 **Before you leave**
-- Final notebook + one-page report on the course portal
-- Solutions of all labs are in `solutions/` after the deadline
 - Optional material: `course/optional/`
 - Short anonymous feedback form (5 questions)
 

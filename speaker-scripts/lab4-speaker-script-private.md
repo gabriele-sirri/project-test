@@ -1,27 +1,24 @@
 # Lab 4 — Speaker Script
 
-*Companion of lab4.md (18 slides).*
+*Companion of lab4.md (17 slides) and lab4_tmva.md (Talk C).*
 
 ## How to use this script
 
 - **SAY** = read aloud. **IT** = riassunto per te. **\[PAUSE\]** = respira. **\[DO\]** = azione. In grassetto il messaggio chiave.
 - Numeri di slide = quelli di lab4.md, divisori inclusi.
-- Oggi: 1 ora e mezza di lezione/hands-on e **75 minuti di showcase**. La parte difficile è gestire il tempo dei team: scrivi sul foglio l'ordine e il cronometro.
-- Prima del lab: sorteggia l'ordine dei team e preparalo; prova che il tuo portatile mostri un notebook da Codespaces.
+- Oggi: HistFactory (Talk A, B e hands-on A, B), poi **Talk C + demo guidata TMVA** (non da consegnare) e **35 minuti di lab aperto**. Nessun progetto, nessuno showcase.
+- Consegna: nel Lab 4 si consegnano **entrambi** i notebook (A e B) su Virtuale. In totale: 2 su 3 nei Lab 1–3, più A e B del Lab 4.
+- Prima del lab: prova che la demo TMVA giri (serve ROOT con TMVA, e il compilatore per gli esempi del ROOT Team); controlla che il tuo portatile mostri un notebook da Codespaces.
 
 ## New phrases for today
 
 | Situation | Say | IT |
 | --- | --- | --- |
-| Draw | We draw the order by lottery. | Ordine per sorteggio |
-| Start | Team one, please start. You have five minutes. | Team uno, iniziate |
-| One minute | You have one minute left. | Resta un minuto |
-| Stop | Thank you. Please, we need to stop here. | Dobbiamo fermarci |
-| Who | Who did what in your team? | Chi ha fatto cosa? |
-| Question | Does anyone have a question for this team? | Domande per questo team? |
-| Speak up | Please speak to the class, not to the screen. | Parlate alla classe |
-| Thanks | Thank you very much. Let's give them a round of applause. | Applauso |
-| Next | Next team, please get ready. | Prossimo team |
+| Run | Please run the notebook from the top. | Eseguite il notebook dall'inizio |
+| Compare | Compare your number with the check cell. | Confrontate col numero della cella check |
+| Cut | Which cut would you choose, and why? | Quale taglio scegliereste? |
+| Move | Change the yields. Does the optimal cut move? | Cambiate le rese: il taglio ottimale si sposta? |
+| Hand-in | Please upload both notebooks on Virtuale. | Caricate i due notebook su Virtuale |
 | Feedback | Please fill the short form before you leave. | Compilate il modulo prima di uscire |
 
 ## Pronunciation help
@@ -34,8 +31,10 @@
 | interpolation | in-TUR-puh-LAY-shun |
 | overall | OH-ver-all |
 | luminosity | loo-mi-NOS-i-tee |
-| showcase | SHOW-case |
-| caveat | KAV-ee-at |
+| efficiency | ih-FISH-un-see |
+| purity | PYOOR-ih-tee |
+| Asimov | AZ-ih-mov |
+| boosted | BOO-stid |
 | lambda | LAM-duh |
 | just-in-time | just in TIME (JIT = jit) |
 | multithreaded | MUL-ti-THRED-id |
@@ -45,9 +44,9 @@
 
 ## 0:00 — Recap (slides 1–3, 5 min)
 
-**SAY (slide 1):** Good morning, and welcome to the last lab. This is Lab 4: HistFactory, and your analysis. Today we have two parts. In the first hour and a half, we build a binned model with HistFactory. Then, you present your work. \[PAUSE\] I am looking forward to seeing what you did in these weeks.
+**SAY (slide 1):** Good morning, and welcome to the last lab. This is Lab 4: HistFactory, and event selection. Today we have three parts. In the first two hours, we build a binned model with HistFactory, and we use RDataFrame. Then, a short talk and a demo on TMVA, to select events. At the end, an open lab, to finish your notebooks. \[PAUSE\] Today you hand in both notebooks, A and B.
 
-*IT: ultimo lab; 1.5 ore di HistFactory poi showcase dei team.*
+*IT: ultimo lab; HistFactory, poi TMVA (demo), poi lab aperto; oggi si consegnano A e B.*
 
 **\[DO\] slide 2 — Recap**
 
@@ -61,7 +60,7 @@
 
 **\[DO\] slide 3 — Schedule**
 
-**SAY:** This is our plan. Two talks and two hands-on parts. At eleven fifteen, you have twenty minutes to finish your project. At eleven thirty-five, the showcases start. Every team has three to five minutes. I will use a timer. \[PAUSE\] The order is by lottery. Let me draw it now. \[DO\] Draw the order and write it on the board.
+**SAY:** This is our plan. Two talks and two hands-on parts on HistFactory. At eleven fifteen, a third talk, on TMVA, and a guided demo. At ten past twelve, the open lab: you finish the notebooks, and you ask me everything. At a quarter to one, the wrap-up and the feedback form.
 
 ---
 
@@ -142,7 +141,7 @@
 
 **\[DO\] slide 16 — Exercise B**
 
-**SAY:** Exercise B. Step one: build the measurement. Two channels, four samples. The signal has the NormFactor mu. The ZZ has the NormFactor k ZZ, and it is the same name in both channels. Step two: fit. Then compare with a fit without the control region. Step three: the interval on mu and the significance. Step four: add a five percent luminosity uncertainty. \[PAUSE\] **Attention: five percent is an illustrative size, not the CMS value. In your project, use a number you can justify.** Step five: slice and profile of mu, and the correlation between mu and k ZZ. Thirty-five minutes.
+**SAY:** Exercise B. Step one: build the measurement. Two channels, four samples. The signal has the NormFactor mu. The ZZ has the NormFactor k ZZ, and it is the same name in both channels. Step two: fit. Then compare with a fit without the control region. Step three: the interval on mu and the significance. Step four: add a five percent luminosity uncertainty. \[PAUSE\] **Attention: five percent is an illustrative size, not the CMS value. In a real analysis, use a number you can justify.** Step five: slice and profile of mu, and the correlation between mu and k ZZ. Thirty-five minutes.
 
 *IT: B1 Measurement, B2 con/senza CR, B3 interval/Z, lumi 5% (illustrativo!), B4 anatomia. Attesi: μ≈0.98, kZZ≈0.90, Z≈3.5, \[0.62,1.43\]; senza CR μ≈0.92, Z≈3.3.*
 
@@ -159,87 +158,117 @@
 
 ## 2:05 — BREAK (10 min)
 
-**SAY:** Let's take a short break. We restart at 11:15 for the project.
+**SAY:** Let's take a short break. We restart at 11:15 with a new topic: how to select events.
 
 ---
 
-## 2:15 — Project: the last twenty minutes (20 min)
+## 2:15 — Talk C: Selecting events with TMVA (lab4\_tmva.md, 20 min)
 
-**SAY:** You have twenty minutes to finish. Please do three things. One: choose your figure. Only one. Two: write your number, with its uncertainty. Three: write your caveat, the most important limitation. \[PAUSE\] Decide who speaks about what. **Every team member speaks.** I will ask: who did what? I walk around. Please call me if the notebook does not run.
+*Slides: lab4\_tmva.md. This is a different file: open it before the break.*
 
-*IT: 20 minuti: una figura, un numero, un caveat; decidere chi parla; ognuno parla.*
+**\[DO\] slide 2 — The problem**
 
-**Questions to ask each team:**
+**SAY:** Until now, we had the events already selected. Today, a short look at how to select them. The data are from the MAGIC telescope: gamma rays are the signal, hadrons are the background. Ten image parameters for each event. \[PAUSE\] A cut on one variable is not enough, so we combine them. Rectangular cuts are simple and transparent. Fisher is a linear combination. And the BDT, the boosted decision tree, is the workhorse of high-energy physics. TMVA trains, tests, and compares them, and makes the plots for us.
 
-- What is your figure?
-- What is your number, with its uncertainty?
-- What is your caveat?
-- Who will present what?
+*IT: problema gamma/adroni, 10 variabili, tagli rettangolari, Fisher, BDT; TMVA fa training, test e grafici.*
 
----
+**\[DO\] slide 3 — Vocabulary**
 
-## 2:35 — Showcases (slide 17, 75 min)
+**SAY:** Machine-learning people use different words. Recall is the signal efficiency. False-positive rate is the background efficiency. One minus it is the background rejection. Precision is the purity. And accuracy, we do not use it. \[PAUSE\] **The efficiencies do not depend on the signal-to-background ratio. The purity does.** That is why in physics we quote the two efficiencies, and the expected yields, separately.
 
-**\[DO\] slide 17 — Showcase rules**
+*IT: tabella ML ↔ fisica; efficienze indipendenti da S/B, purezza no.*
 
-**SAY:** Now the showcases. \[PAUSE\] The rules are on the slide. Three to five minutes per team. One figure, one number, one caveat. Every member speaks. At the end, one question from another team. \[PAUSE\] I will say: one minute left. Please finish when I say stop. I know it is difficult to speak about a project in five minutes. It is a good exercise.
+**\[DO\] slides 4–5 — ROC and the naive figure of merit**
 
-*IT: regole; cronometro; un minuto di preavviso; una domanda per team.*
+**SAY:** The ROC curve plots the background rejection against the signal efficiency. Every point is a cut on the classifier response. So, different cuts are different working points of the same classifier. Which is the best? **It depends on what you want to measure.** Choose the cut by optimising the final significance, not the accuracy. \[PAUSE\] The naive figure of merit is s over square root of b. It is valid for s much smaller than b, and large b. But when the background goes to zero, it explodes. Example: three signal events, background of zero point one. s over square root of b is about nine and a half, from three events. It is pathological.
 
-**For each team (use this sequence):**
+*IT: ROC, working point; s/sqrt(b) patologico a basso fondo (3 eventi, b=0.1 → 9.5).*
 
-1. SAY: Team \[number\], please start. You have five minutes.
-2. At four minutes: You have one minute left.
-3. At five minutes: Thank you. Please, we need to stop here.
-4. SAY: Who did what in your team? (If it was not said.)
-5. SAY: Does anyone have a question for this team?
-6. SAY: Thank you very much. Let's give them a round of applause. Next team, please get ready.
+**\[DO\] slide 6 — The Asimov significance**
 
-**Questions you can ask if the room is silent:**
+**SAY:** The Asimov significance comes from the profile-likelihood ratio, with b known. It is the paper of Cowan, Cranmer, Gross and Vitells, the same one I asked you to read. It is always smaller than or equal to s over square root of b. It behaves well for small b, and for s much smaller than b it is the same as the naive formula. \[PAUSE\] One limit: it ignores the uncertainty on b. In Lab 3 you know how to include it, as a nuisance parameter.
 
-- What would break your fit?
-- What did you assume, that you could not check?
-- Which systematic uncertainty is the biggest?
-- If you had one more week, what would you do?
-- Is your result a measurement, a limit, or a discovery?
+*IT: Z_A da profile likelihood, sempre ≤ s/sqrt(b); limite: ignora l'incertezza su b (Lab 3).*
 
-**If you run out of time:** keep three minutes per team, no questions. Use the last ten minutes for the written feedback.
+**\[DO\] slides 7–8 — What the notebook does, take-home messages**
+
+**SAY:** Now the notebook. It converts the data to ROOT trees, it trains a BDT and a Fisher with TMVA, it reads the test tree, and it scans the cut: efficiencies, purity, the two significances. Then it finds the optimal cut for two different sets of expected yields. **The optimal cut moves.** \[PAUSE\] Three messages to remember. Translate the words: recall is efficiency, precision is purity. Optimise the physics figure of merit, with the expected yields. And the efficiency is a systematic: model it as a nuisance parameter.
+
+*IT: cosa fa il notebook; 3 messaggi: tradurre il vocabolario, ottimizzare la figura di merito fisica, efficienza = sistematica.*
 
 ---
 
-## 3:50 — Wrap-up and feedback (slide 18, 10 min)
+## 2:35 — Guided demo C: TMVA on MAGIC (35 min)
 
-**SAY:** Let's finish the course. \[PAUSE\] You can now do four things. You can write the complete model: the marked Poisson, the nuisance parameters, the constraints, the control regions. You can fit it and validate it with toys. You can make statements with RooStats: a significance, an interval, a limit. And you can read a HistFactory workspace, the same as in a published paper. \[PAUSE\] Before you leave. Please upload your final notebook and your one-page report to the course portal. The solutions of all the labs are in the solutions folder, after the deadline. The optional material is in the optional folder: the TMVA demo, the speed test, the convolution, and the upper limits. And please fill the short anonymous feedback form. It has five questions. **Your feedback decides what I change next year.** \[PAUSE\] Thank you very much. It was a pleasure.
+**SAY:** Please open demo C, tmva magic demo, in the lab four folder. We go step by step. It is not handed in: the questions at the end are for discussion. \[PAUSE\] Run the cells with me. The training takes a short time. While it runs, look at the TMVA plots: the ROC curve, and the response of signal and background.
 
-*IT: 4 competenze; consegna sul portale; soluzioni dopo la scadenza; materiale opzionale; modulo anonimo di feedback (5 domande).*
+*IT: demo guidata, non da consegnare; eseguire insieme; mentre il training gira, guardare i grafici TMVA.*
+
+**Milestones to follow in the room:**
+
+- Data converted, two ROOT files created: signal and background.
+- BDT and Fisher trained: the file TMVA magic dot root exists.
+- The scan runs: the optimal cut is printed for s over square root of b and for Z A.
+- The check cells say PASS.
+
+**Questions for the discussion at the end (from the notebook):**
+
+- Why does s over square root of b push the cut to extreme values when the background efficiency goes to zero, and what does Z A do instead?
+- Change the illustrative yields. How do the optimal cut and the two significances move?
+- The cut was optimised on the test sample, then used on data. What bias does it introduce, and how do you avoid it?
+- Which systematic uncertainty would you add to the model, and as which kind of nuisance parameter?
+
+---
+
+## 3:10 — Open lab (35 min)
+
+**SAY:** Now thirty-five minutes of open lab. Finish Exercise A and Exercise B. Today you hand in both. \[PAUSE\] Run each notebook from the top, and check that every check says PASS. If a check fails, call me. If you have finished, try the questions at the end of the TMVA demo, or look at the optional notebooks. I walk around.
+
+*IT: 35 minuti di lab aperto: finire A e B (da consegnare entrambi), check PASS; se hanno finito, domande TMVA o notebook opzionali.*
+
+**Questions to ask each student:**
+
+- Does your Exercise A run to the end? Which step was the hardest?
+- In Exercise B, what happens to mu when you remove the control region?
+- What is the meaning of the parameter k ZZ?
+- Which of the two significances would you quote, and why?
+
+---
+
+## 3:45 — Wrap-up and feedback (slide 17, 10 min)
+
+**SAY:** Let's finish the course. \[PAUSE\] You can now do four things. You can write the complete model: the marked Poisson, the nuisance parameters, the constraints, the control regions. You can fit it and validate it with toys. You can make statements with RooStats: a significance, an interval, a limit. And you can read a HistFactory workspace, the same as in a published paper. \[PAUSE\] Before you leave. Please upload both notebooks of Lab 4, A and B, on Virtuale. In total you hand in two notebooks out of three for each of the first three labs, and both of Lab 4. The solutions of all the labs appear after the deadline. The optional material is in the optional folder: the speed test, the convolution, and the upper limits. And please fill the short anonymous feedback form. It has five questions. **Your feedback decides what I change next year.** \[PAUSE\] Thank you very much. It was a pleasure.
+
+*IT: 4 competenze; consegna A e B del Lab 4 su Virtuale; riepilogo regola 2/3 + 2/2; soluzioni dopo la scadenza; materiale opzionale; modulo anonimo di feedback (5 domande).*
 
 ---
 
 ## Emergency notes
 
-- **Few teams or a short showcase?** Use the extra time for questions and for the optional TMVA demo (30 minutes, slides optional\_tmva).
-- **A team did not finish?** Say: It is fine. Show what you have: the figure and the caveat. The caveat is the most important part.
-- **Many teams?** Three minutes each, no questions. Group questions at the end.
-- **A notebook does not run live?** Say: Please show the figure you saved before. We do not debug live.
-- **A student asks about the exam?** Say: In the exam there is a question about your lab work. I may ask about your own result.
+- **Running late?** Shorten Talk C to slides 2, 3 and 6, and run the demo in 25 minutes. Never skip the hand-in rule at the end.
+- **TMVA does not run on a laptop?** Say: Please use the Codespace, or follow on my screen. The training is the same.
+- **Exercise A macros fail to compile?** They need the C++ compiler. Say: Please use the Codespace. We fix your laptop after class.
+- **A notebook does not run?** Say: Please call me. Do not lose time: check the cell that fails, and read me the error.
+- **A student asks about the exam?** Say: When the required notebooks are in, your lab work counts as done and you can take the written exam. Details are in the course page.
+- **A student asks about RooUnfold or more TMVA?** Say: Good question. It goes beyond the four labs. Ask me after class.
 
 ---
 
-## Setup reminders and the showcase (laptops and Codespaces)
+## Setup reminders (laptops and Codespaces)
 
-**SAY (at the start):** A practical point for today. In the showcase, you present from your own laptop, or from Codespaces in the browser of the lab computer. Please open your notebook before your turn, and run it once. \[PAUSE\] Please keep a saved figure ready: we do not debug live. If you work in Codespaces, please download your notebook and your report before you leave. Before the end of the lab, stop your codespace.
+**SAY (at the start):** A practical point for today. Exercise A runs C++ macros, so it needs the compiler. If it does not work on your laptop, please use Codespaces in the browser. \[PAUSE\] When you finish, download your two notebooks, and upload them on Virtuale. Then stop your codespace.
 
-*IT: showcase da portatile o da Codespaces; notebook già aperto ed eseguito; figura salvata; scaricare notebook e report; fermare il codespace.*
+*IT: Exercise A usa macro C++ (compilatore); piano B Codespaces; scaricare i notebook, caricarli su Virtuale, fermare il codespace.*
 
 **Notes for you:**
 
-- Before the showcase, check how the projector connects: HDMI or USB-C. Students with a laptop may need an adapter. Prepare one lab computer as a backup: it can show a Codespace in a browser.
 - The ROOT Team macros of Exercise A are in C++ and need the compiler: they work in the Codespace. On a laptop, ask if the check setup shows the compiler PASS.
-- Remind them that the final notebook and the report go to the course portal.
+- The TMVA demo writes files in the working folder: TMVA magic dot root and the dataset magic folder. In a Codespace the quota is not an issue; on a laptop, make sure there is a writable folder.
+- Remind them that both notebooks of Lab 4 go on Virtuale.
 
 | Situation | Say | IT |
 | --- | --- | --- |
-| Prepare | Please open your notebook before your turn. | Aprite il notebook prima del turno |
-| Backup | Please show the figure you saved before. | Mostrate la figura salvata |
-| Laptop | Please connect your laptop to the projector. | Collegate il portatile al proiettore |
-| Hand-in | Please download your files before you leave. | Scaricate i file |
+| Prepare | Please run the notebook from the top. | Eseguite il notebook dall'inizio |
+| Compiler | Does the check setup say PASS for the compiler? | check\_setup dice PASS per il compilatore? |
+| Hand-in | Please upload both notebooks on Virtuale. | Caricate i due notebook su Virtuale |
+| Stop | Please stop your codespace. | Fermate il codespace |
