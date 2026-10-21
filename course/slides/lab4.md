@@ -206,7 +206,7 @@ Notebook: `course/lab4/ex_B.ipynb`
 - fit it, validate it with toys, and make statements with RooStats
 - read a HistFactory workspace and a published statistical model
 
-**Hand-in**
+**Submission**
 - Lab 4: **both** notebooks (A and B), on **Virtuale**
 - In total: 2 of 3 notebooks in each of Labs 1–3, plus A and B of Lab 4
 - Solutions of all labs appear after the deadline

@@ -1,10 +1,12 @@
 # CUORE-0: neutrinoless double-beta decay
 
-**Field:** nuclear physics · **Used in:** extra case for self-study (not one of the hand-ins)
+**Field:** nuclear physics · **Used in:** extra case for self-study
 
 **Question.** Is there a peak at the $^{130}$Te $Q$-value (2527.5 keV)? If not, what upper limit on the signal can you set?
 
 **Source.** Simplified problem modelled on the first phase of the CUORE experiment.
+
+**Real measurement.** CUORE Collaboration, “Search for Neutrinoless Double-Beta Decay of ¹³⁰Te with CUORE-0”, Phys. Rev. Lett. 115 (2015) 102502: [arXiv:1504.02454](https://arxiv.org/abs/1504.02454), [doi:10.1103/PhysRevLett.115.102502](https://doi.org/10.1103/PhysRevLett.115.102502).
 
 | File | Content |
 |---|---|

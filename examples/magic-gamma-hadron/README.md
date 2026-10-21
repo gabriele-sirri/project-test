@@ -6,6 +6,8 @@
 
 **Source.** MAGIC gamma telescope dataset (UCI repository, see `data/magic04.names`): simulated Cherenkov telescope events.
 
+**Real measurement.** None: the events are Monte Carlo simulated for the MAGIC telescope. Dataset: [UCI Machine Learning Repository, MAGIC Gamma Telescope](https://archive.ics.uci.edu/dataset/159/magic+gamma+telescope) (CC BY 4.0). Reference: R. K. Bock et al., Nucl. Instrum. Methods A 516 (2004) 511–528.
+
 | File | Content |
 |---|---|
 | `data/magic04.data` | 19 020 events: 10 image parameters and the class `g` (gamma) or `h` (hadron) |

@@ -26,7 +26,7 @@ Discuss in pairs, then we compare:
 1. In the marked Poisson model, which factor is the **rate** and which the **shape**?
 2. Extended fit vs fit with fractions: what information is lost with fractions?
 3. A binned likelihood is **not** a $\chi^2$ fit. Why does it matter for low counts?
-4. Which two Lab 1 notebooks did you hand in? Which cell was the hardest?
+4. Which two Lab 1 notebooks did you submit? Which cell was the hardest?
 
 ---
 
@@ -268,7 +268,7 @@ Ask for help early. I walk around.
 
 ---
 
-# Wrap-up and hand-in (before Lab 3, in 2 weeks)
+# Wrap-up and submission (before Lab 3, in 2 weeks)
 
 **Today you learned**
 - what `fitTo` does: NLL, MIGRAD, HESSE, MINOS
@@ -276,7 +276,7 @@ Ask for help early. I walk around.
 - toys, pulls, bias and coverage
 
 **By Lab 3**
-1. Hand in **2 of the 3** notebooks of `lab2/` (A, B, C: your choice) on **Virtuale**, every check `PASS`
+1. Submit **2 of the 3** notebooks of `lab2/` (A, B, C: your choice) on **Virtuale**, every check `PASS`
 2. Solutions of all three appear after the deadline
 3. Read Cowan, Cranmer, Gross, Vitells, *Asymptotic formulae for likelihood-based tests of new physics* (arXiv:1007.1727), Sections 1–2
 

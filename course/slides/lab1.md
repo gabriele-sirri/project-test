@@ -21,7 +21,7 @@ G. Sirri · Hands-on sessions, 9:00–13:00
 
 # Roadmap: 4 labs, one analysis chain
 
-| Lab | Topic | What you hand in |
+| Lab | Topic | What to submit |
 |---|---|---|
 | **1** | Data model, RooFit, fits | **2 of 3** notebooks (A, B, C) |
 | **2** | Likelihood, MINUIT, toys, nuisance parameters | **2 of 3** notebooks |
@@ -29,7 +29,7 @@ G. Sirri · Hands-on sessions, 9:00–13:00
 | **4** | HistFactory, RDataFrame `Vary`, TMVA | **both** notebooks (A, B) |
 
 - Labs are **two weeks apart**: finish your notebooks between labs
-- You choose which 2 of the 3 to hand in. We work on **all** of them in class, and solutions are published for all
+- You choose which 2 of the 3 to submit. We work on **all** of them in class, and solutions are published for all
 - Each lab: 3 × (short talk → hands-on), 2 breaks
 - Tools: **ROOT / RooFit / RooStats**, Python first, modern C++ when it matters
 
@@ -47,7 +47,7 @@ G. Sirri · Hands-on sessions, 9:00–13:00
 | 11:50 | **Break (10 min)** |
 | 12:00 | Talk C: composite models, extended fits |
 | 12:15 | Hands-on C: signal + background |
-| 12:50 | Wrap-up and hand-in rules |
+| 12:50 | Wrap-up and submission rules |
 
 ---
 
@@ -307,7 +307,7 @@ What happened to the information on the total yield?
 
 ---
 
-# Wrap-up and hand-in (before Lab 2, in 2 weeks)
+# Wrap-up and submission (before Lab 2, in 2 weeks)
 
 **Today you learned**
 - the marked Poisson model: rate × shape
@@ -315,7 +315,7 @@ What happened to the information on the total yield?
 - unbinned vs binned likelihood, extended fits
 
 **By Lab 2**
-1. Hand in **2 of the 3** notebooks of `lab1/` (A, B, C: your choice), run top to bottom with every check `PASS`
+1. Submit **2 of the 3** notebooks of `lab1/` (A, B, C: your choice), run top to bottom with every check `PASS`
 2. Upload them on **Virtuale**
 3. Read *Practical Statistics for the LHC*, sections on likelihood and nuisance parameters
 4. Open your Codespace once, to confirm it still works

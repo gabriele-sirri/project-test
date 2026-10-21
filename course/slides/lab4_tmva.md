@@ -86,7 +86,7 @@ $$Z_A=\sqrt{2\Big[(s+b)\ln\Big(1+\frac{s}{b}\Big)-s\Big]}\;\le\;\frac{s}{\sqrt b
 4. Scan the cut: $\varepsilon_s$, $\varepsilon_b$, purity, $s/\sqrt b$, $Z_A$
 5. Find the optimal cut for two sets of expected yields: **it moves**
 
-Notebook: `course/lab4/demo_C_tmva.ipynb` (guided demo, not handed in)
+Notebook: `course/lab4/demo_C_tmva.ipynb` (guided demo)
 
 ---
 

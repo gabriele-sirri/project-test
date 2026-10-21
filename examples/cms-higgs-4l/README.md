@@ -6,6 +6,8 @@
 
 **Source.** CMS Open Data, tutorial *HiggsExample11-12* (`data/cms_m4l/README.md`). Paper: CMS, arXiv:1207.7235.
 
+**Real measurement.** CMS Collaboration, “Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC”, Phys. Lett. B 716 (2012) 30: [arXiv:1207.7235](https://arxiv.org/abs/1207.7235).
+
 | File | Content |
 |---|---|
 | `data/cms_m4l/_cms_higgs_data.txt` | data histogram, bins of 3 GeV |

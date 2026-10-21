@@ -19,5 +19,5 @@ Solutions are **not** here: see the `solutions` branch.
 **Notes**
 - The problems are simplified on purpose and imitate the published plots. Do not quote physics results from them.
 - `exercise-original.md` files are plain-text extractions: equations, figures and tables are missing. Replace them with a proper export of the original statement when you have it.
-- The extra cases are not part of the hand-ins: each has a suggested path to follow after the corresponding lab, on your own.
+- The extra cases are for self-study: each has a suggested path to follow on your own after the corresponding lab.
 - Adding a case = adding a folder with the same four parts.

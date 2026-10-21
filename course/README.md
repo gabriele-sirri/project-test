@@ -16,18 +16,18 @@ Four labs of four hours (9:00–13:00), two weeks apart. Tools: **ROOT, RooFit, 
 3. Run `python course/tools/check_setup.py`: every line must say PASS. Do it before Lab 1.
 4. Open `course/lab1/ex_A.ipynb`.
 
-In Codespaces your files stay in your codespace. To hand in, download the notebook and upload it on Virtuale. Stop the codespace when you finish. Free quota: 60 hours per month on a 2-core codespace. Closing the browser does **not** stop it: it keeps running (and consuming quota) until the idle timeout, 30 minutes by default.
+In Codespaces your files stay in your codespace. To submit, download the notebook and upload it on Virtuale. Stop the codespace when you finish. Free quota: 60 hours per month on a 2-core codespace. Closing the browser does **not** stop it: it keeps running (and consuming quota) until the idle timeout, 30 minutes by default.
 
-## What to hand in
+## What to submit
 
-No project, no grade: the outcome of the lab module is **work done** or **work not yet handed in**, and *work done* gives access to the written exam.
+The outcome of the lab module is **work done** or **work not yet submitted**. *Work done* gives access to the written exam.
 
-| Lab | Notebooks | You hand in |
+| Lab | Notebooks | You submit |
 |---|---|---|
 | 1 | A, B, C | **2 of 3**, your choice |
 | 2 | A, B, C | **2 of 3**, your choice |
 | 3 | A, B, C | **2 of 3**, your choice |
-| 4 | A, B (+ guided demo C, not handed in) | **both** A and B |
+| 4 | A, B | **both** A and B |
 
 Total: **8 notebooks**. We work on all of them in class and the solutions of all are published after the deadline.
 Each notebook must run top to bottom with every check at `PASS`. Upload them on **Virtuale**, one file per notebook. Notebooks of the same lab are independent: you can choose any two.

@@ -6,7 +6,7 @@
 
 - **SAY** = read aloud. **IT** = riassunto per te. **\[PAUSE\]** = respira. **\[DO\]** = azione. In grassetto il messaggio chiave.
 - Numeri di slide = quelli di lab4.md, divisori inclusi.
-- Oggi: HistFactory (Talk A, B e hands-on A, B), poi **Talk C + demo guidata TMVA** (non da consegnare) e **35 minuti di lab aperto**. Nessun progetto, nessuno showcase.
+- Oggi: HistFactory (Talk A, B e hands-on A, B), poi **Talk C + demo guidata TMVA** e **35 minuti di lab aperto**.
 - Consegna: nel Lab 4 si consegnano **entrambi** i notebook (A e B) su Virtuale. In totale: 2 su 3 nei Lab 1–3, più A e B del Lab 4.
 - Prima del lab: prova che la demo TMVA giri (serve ROOT con TMVA, e il compilatore per gli esempi del ROOT Team); controlla che il tuo portatile mostri un notebook da Codespaces.
 
@@ -18,7 +18,7 @@
 | Compare | Compare your number with the check cell. | Confrontate col numero della cella check |
 | Cut | Which cut would you choose, and why? | Quale taglio scegliereste? |
 | Move | Change the yields. Does the optimal cut move? | Cambiate le rese: il taglio ottimale si sposta? |
-| Hand-in | Please upload both notebooks on Virtuale. | Caricate i due notebook su Virtuale |
+| Upload | Please upload both notebooks on Virtuale. | Caricate i due notebook su Virtuale |
 | Feedback | Please fill the short form before you leave. | Compilate il modulo prima di uscire |
 
 ## Pronunciation help
@@ -44,7 +44,7 @@
 
 ## 0:00 — Recap (slides 1–3, 5 min)
 
-**SAY (slide 1):** Good morning, and welcome to the last lab. This is Lab 4: HistFactory, and event selection. Today we have three parts. In the first two hours, we build a binned model with HistFactory, and we use RDataFrame. Then, a short talk and a demo on TMVA, to select events. At the end, an open lab, to finish your notebooks. \[PAUSE\] Today you hand in both notebooks, A and B.
+**SAY (slide 1):** Good morning, and welcome to the last lab. This is Lab 4: HistFactory, and event selection. Today we have three parts. In the first two hours, we build a binned model with HistFactory, and we use RDataFrame. Then, a short talk and a demo on TMVA, to select events. At the end, an open lab, to finish your notebooks. \[PAUSE\] Today you submit both notebooks, A and B.
 
 *IT: ultimo lab; HistFactory, poi TMVA (demo), poi lab aperto; oggi si consegnano A e B.*
 
@@ -200,7 +200,7 @@
 
 ## 2:35 — Guided demo C: TMVA on MAGIC (35 min)
 
-**SAY:** Please open demo C, tmva magic demo, in the lab four folder. We go step by step. It is not handed in: the questions at the end are for discussion. \[PAUSE\] Run the cells with me. The training takes a short time. While it runs, look at the TMVA plots: the ROC curve, and the response of signal and background.
+**SAY:** Please open demo C, tmva magic demo, in the lab four folder. We go step by step. The questions at the end are for discussion. \[PAUSE\] Run the cells with me. The training takes a short time. While it runs, look at the TMVA plots: the ROC curve, and the response of signal and background.
 
 *IT: demo guidata, non da consegnare; eseguire insieme; mentre il training gira, guardare i grafici TMVA.*
 
@@ -222,7 +222,7 @@
 
 ## 3:10 — Open lab (35 min)
 
-**SAY:** Now thirty-five minutes of open lab. Finish Exercise A and Exercise B. Today you hand in both. \[PAUSE\] Run each notebook from the top, and check that every check says PASS. If a check fails, call me. If you have finished, try the questions at the end of the TMVA demo, or look at the optional notebooks. I walk around.
+**SAY:** Now thirty-five minutes of open lab. Finish Exercise A and Exercise B. Today you submit both. \[PAUSE\] Run each notebook from the top, and check that every check says PASS. If a check fails, call me. If you have finished, try the questions at the end of the TMVA demo, or look at the optional notebooks. I walk around.
 
 *IT: 35 minuti di lab aperto: finire A e B (da consegnare entrambi), check PASS; se hanno finito, domande TMVA o notebook opzionali.*
 
@@ -237,7 +237,7 @@
 
 ## 3:45 — Wrap-up and feedback (slide 17, 10 min)
 
-**SAY:** Let's finish the course. \[PAUSE\] You can now do four things. You can write the complete model: the marked Poisson, the nuisance parameters, the constraints, the control regions. You can fit it and validate it with toys. You can make statements with RooStats: a significance, an interval, a limit. And you can read a HistFactory workspace, the same as in a published paper. \[PAUSE\] Before you leave. Please upload both notebooks of Lab 4, A and B, on Virtuale. In total you hand in two notebooks out of three for each of the first three labs, and both of Lab 4. The solutions of all the labs appear after the deadline. The optional material is in the optional folder: the speed test, the convolution, and the upper limits. And please fill the short anonymous feedback form. It has five questions. **Your feedback decides what I change next year.** \[PAUSE\] Thank you very much. It was a pleasure.
+**SAY:** Let's finish the course. \[PAUSE\] You can now do four things. You can write the complete model: the marked Poisson, the nuisance parameters, the constraints, the control regions. You can fit it and validate it with toys. You can make statements with RooStats: a significance, an interval, a limit. And you can read a HistFactory workspace, the same as in a published paper. \[PAUSE\] Before you leave. Please upload both notebooks of Lab 4, A and B, on Virtuale. In total you submit two notebooks out of three for each of the first three labs, and both of Lab 4. The solutions of all the labs appear after the deadline. The optional material is in the optional folder: the speed test, the convolution, and the upper limits. And please fill the short anonymous feedback form. It has five questions. **Your feedback decides what I change next year.** \[PAUSE\] Thank you very much. It was a pleasure.
 
 *IT: 4 competenze; consegna A e B del Lab 4 su Virtuale; riepilogo regola 2/3 + 2/2; soluzioni dopo la scadenza; materiale opzionale; modulo anonimo di feedback (5 domande).*
 
@@ -245,7 +245,7 @@
 
 ## Emergency notes
 
-- **Running late?** Shorten Talk C to slides 2, 3 and 6, and run the demo in 25 minutes. Never skip the hand-in rule at the end.
+- **Running late?** Shorten Talk C to slides 2, 3 and 6, and run the demo in 25 minutes. Never skip the submission rule at the end.
 - **TMVA does not run on a laptop?** Say: Please use the Codespace, or follow on my screen. The training is the same.
 - **Exercise A macros fail to compile?** They need the C++ compiler. Say: Please use the Codespace. We fix your laptop after class.
 - **A notebook does not run?** Say: Please call me. Do not lose time: check the cell that fails, and read me the error.
@@ -270,5 +270,5 @@
 | --- | --- | --- |
 | Prepare | Please run the notebook from the top. | Eseguite il notebook dall'inizio |
 | Compiler | Does the check setup say PASS for the compiler? | check\_setup dice PASS per il compilatore? |
-| Hand-in | Please upload both notebooks on Virtuale. | Caricate i due notebook su Virtuale |
+| Upload | Please upload both notebooks on Virtuale. | Caricate i due notebook su Virtuale |
 | Stop | Please stop your codespace. | Fermate il codespace |

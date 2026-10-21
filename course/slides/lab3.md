@@ -26,7 +26,7 @@ Discuss in pairs, then we compare:
 1. Slice vs profile likelihood: which is wider, and why?
 2. In the on/off problem, where does the uncertainty on the background come from?
 3. What does a pull RMS of 1.3 tell you?
-4. Which two Lab 2 notebooks did you hand in? Did the toy loop converge for you?
+4. Which two Lab 2 notebooks did you submit? Did the toy loop converge for you?
 
 ---
 
@@ -275,7 +275,7 @@ If the answer to the last one is "almost nothing", say it in your notebook: that
 
 ---
 
-# Wrap-up and hand-in (before Lab 4, in 2 weeks)
+# Wrap-up and submission (before Lab 4, in 2 weeks)
 
 **Today you learned**
 - constraint term vs auxiliary measurement, global observables
@@ -283,7 +283,7 @@ If the answer to the last one is "almost nothing", say it in your notebook: that
 - correlated systematics: covariance, diagonalisation, rank
 
 **By Lab 4**
-1. Hand in **2 of the 3** notebooks of `lab3/` (A, B, C: your choice) on **Virtuale**, every check `PASS`
+1. Submit **2 of the 3** notebooks of `lab3/` (A, B, C: your choice) on **Virtuale**, every check `PASS`
 2. Solutions of all three appear after the deadline
 3. Read the HistFactory section of the ROOT manual (`root.cern/manual/roofit/`) and look at `third_party/root-cpp-course-roofit/README.md`
 

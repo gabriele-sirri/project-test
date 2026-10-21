@@ -1,10 +1,12 @@
 # MINOS: $\nu_\mu$ disappearance in the Far Detector
 
-**Field:** neutrino physics · **Used in:** extra case for self-study (not one of the hand-ins)
+**Field:** neutrino physics · **Used in:** extra case for self-study
 
 **Question.** What are $\Delta m^2$ and $\sin^2 2\theta$ from the observed energy spectrum, compared with the unoscillated simulation?
 
 **Source.** Inspired by Figures 1–2 of MINOS, “Measurement of Neutrino and Antineutrino Oscillations Using Beam and Atmospheric Data in MINOS”, arXiv:1304.6335.
+
+**Real measurement.** MINOS Collaboration, “Measurement of Neutrino and Antineutrino Oscillations Using Beam and Atmospheric Data in MINOS”: [arXiv:1304.6335](https://arxiv.org/abs/1304.6335).
 
 | File | Content |
 |---|---|

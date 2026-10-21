@@ -64,7 +64,7 @@
 
 **\[DO\] slide 2 — Roadmap**
 
-**SAY:** Here is the plan. We have four labs, one every two weeks. Between the labs you finish your notebooks at home, and you hand them in. \[PAUSE\] The rule is simple: in each of Labs 1, 2 and 3 there are three notebooks, A, B and C. You hand in two of them, the ones you prefer. In Lab 4 there are two notebooks, and you hand in both. We work on all of them in class, and I publish all the solutions. So you will not miss anything. In Lab 1 we learn to build a model. In Lab 2 we study the likelihood and the MINUIT minimiser. In Lab 3 we study systematic uncertainties, RooStats, and a real problem with correlated uncertainties. In Lab 4 we use HistFactory and RDataFrame, and we finish with a demo of TMVA. **Every lab has the same rhythm: a short talk, then hands-on work. Three times, with two breaks.**
+**SAY:** Here is the plan. We have four labs, one every two weeks. Between the labs you finish your notebooks at home, and you submit them. \[PAUSE\] The rule is simple: in each of Labs 1, 2 and 3 there are three notebooks, A, B and C. You submit two of them, the ones you prefer. In Lab 4 there are two notebooks, and you hand in both. We work on all of them in class, and I publish all the solutions. So you will not miss anything. In Lab 1 we learn to build a model. In Lab 2 we study the likelihood and the MINUIT minimiser. In Lab 3 we study systematic uncertainties, RooStats, and a real problem with correlated uncertainties. In Lab 4 we use HistFactory and RDataFrame, and we finish with a demo of TMVA. **Every lab has the same rhythm: a short talk, then hands-on work. Three times, with two breaks.**
 
 *IT: 4 lab, uno ogni 2 settimane; consegna di 2 notebook su 3 nei Lab 1-3 e di entrambi nel Lab 4; si lavora su tutti in aula, soluzioni per tutti; contenuti dei 4 lab, ritmo talk + hands-on.*
 
@@ -231,7 +231,7 @@
 **If students ask:**
 
 - Which two notebooks should I choose? — Your choice. I suggest the ones where you felt less sure, because that is where you learn most. The solutions of the third one are there too.
-- Can I hand in all three? — Yes, I read them with pleasure, but two are enough.
+- Can I submit all three? — Yes, I read them with pleasure, but two are enough.
 - Is it graded? — No grade: the outcome is "work done", and it gives access to the written exam.
 - A check says FAIL. What do I do? — A FAIL means the notebook stops. Fix the cell, or come to my office hours before the deadline.
 
@@ -247,7 +247,7 @@
 
 ## Emergency notes
 
-- **Running late?** Skip B2 (do at home) and shorten the RDataFrame slide. Never skip the explanation of the hand-in rule (2 notebooks out of 3).
+- **Running late?** Skip B2 (do at home) and shorten the RDataFrame slide. Never skip the explanation of the submission rule (2 notebooks out of 3).
 - **Codespaces not working?** Say: Please use SWAN, or the shared notebook link. We fix your installation after class.
 - **A student asks something very hard?** Say: That is an excellent question. It goes beyond today. Let's discuss it after class, or in Lab 2.
 - **Silence after a question?** Wait ten seconds. Then rephrase: Let me ask in a different way.
@@ -276,10 +276,10 @@ Dear students, for the labs please bring a laptop with a working ROOT installati
 | Fallback | Please use Codespaces in your browser. | Usate Codespaces nel browser |
 | Account | You need a free GitHub account. | Serve un account GitHub gratuito |
 | Stop | Please stop the codespace when you finish. | Fermate il codespace a fine lavoro |
-| Hand-in | Please download your notebook and upload it on Virtuale. | Scaricate il notebook e caricatelo su Virtuale |
+| Upload | Please download your notebook and upload it on Virtuale. | Scaricate il notebook e caricatelo su Virtuale |
 
 ### Notes for you
 
 - Before the course, open a Codespace yourself from a lab computer. Check that the browser and the network work.
 - A Codespace consumes the free monthly quota of the student while it is running. Remind them to stop it. The free plan gives 120 core-hours per month: 60 hours on a 2-core codespace. Closing the browser does not stop the codespace: it runs until the idle timeout, 30 minutes by default. Ask them to stop it from the Codespaces page.
-- In Codespaces the files stay in the student's codespace. To hand in, they download the notebook and upload it on Virtuale.
+- In Codespaces the files stay in the student's codespace. To submit, they download the notebook and upload it on Virtuale.

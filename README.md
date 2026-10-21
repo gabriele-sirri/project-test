@@ -37,7 +37,7 @@ The `third_party/root-cpp-course-roofit` files are copied from
 
  - Lab 4 - HistFactory statistical models, RDataFrame `Vary`, and a TMVA demo
 
-Hand-in: 2 of 3 notebooks in each of Labs 1–3, both notebooks of Lab 4 (see [`course/README.md`](course/README.md)).
+Submit 2 of 3 notebooks in each of Labs 1–3, both notebooks of Lab 4 (see [`course/README.md`](course/README.md)).
 
 
 ## Before the course: set up ROOT

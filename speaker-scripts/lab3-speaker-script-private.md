@@ -49,7 +49,7 @@
 
 **\[DO\] slide 2 — Recap**
 
-**SAY:** First a short recap. Please discuss in pairs for two minutes. Question one: slice and profile likelihood. Which is wider, and why? Question two: in the on/off problem, where does the uncertainty on the background come from? Question three: your pull has an RMS of one point three. What does it tell you? Question four: which two notebooks of Lab 2 did you hand in? Did the toy loop converge for you?
+**SAY:** First a short recap. Please discuss in pairs for two minutes. Question one: slice and profile likelihood. Which is wider, and why? Question two: in the on/off problem, where does the uncertainty on the background come from? Question three: your pull has an RMS of one point three. What does it tell you? Question four: which two notebooks of Lab 2 did you submit? Did the toy loop converge for you?
 
 **Expected answers:**
 
@@ -209,7 +209,7 @@
 
 **Questions to ask each student:**
 
-- Which notebook are you on? Which two will you hand in?
+- Which notebook are you on? Which two will you submit?
 - Is this systematic an auxiliary measurement or a constraint?
 - How big is the change on your result?
 - In Exercise C: which are the global observables, and which are the nuisance parameters?
@@ -218,7 +218,7 @@
 
 ## 3:55 — Wrap-up (slide 23, 5 min)
 
-**SAY:** Let's finish. Today you learned three things. First, constraint terms and auxiliary measurements, and the global observables. Second, RooStats: the ModelConfig, the hypothesis test, the profile interval, and the Asimov formula. Third, correlated systematics, covariance, diagonalisation, and rank. \[PAUSE\] For Lab 4: hand in two of the three notebooks on Virtuale. The solutions of all three appear after the deadline. And read the HistFactory section in the ROOT manual. \[PAUSE\] **In Lab 4 we build a binned model with HistFactory, we use RDataFrame, and we finish with a demo of TMVA.** Thank you. See you in two weeks.
+**SAY:** Let's finish. Today you learned three things. First, constraint terms and auxiliary measurements, and the global observables. Second, RooStats: the ModelConfig, the hypothesis test, the profile interval, and the Asimov formula. Third, correlated systematics, covariance, diagonalisation, and rank. \[PAUSE\] For Lab 4: submit two of the three notebooks on Virtuale. The solutions of all three appear after the deadline. And read the HistFactory section in the ROOT manual. \[PAUSE\] **In Lab 4 we build a binned model with HistFactory, we use RDataFrame, and we finish with a demo of TMVA.** Thank you. See you in two weeks.
 
 *IT: 3 cose, compiti (2 notebook su 3 su Virtuale, lettura HistFactory), anteprima Lab 4: HistFactory, RDataFrame, demo TMVA.*
 

@@ -1,10 +1,12 @@
 # ENUBET: energy deposit in a scintillator pad
 
-**Field:** beam instrumentation · **Used in:** extra case for self-study (not one of the hand-ins)
+**Field:** beam instrumentation · **Used in:** extra case for self-study
 
 **Question.** What is the fraction of events with two particles crossing the pad, and what is the detector resolution?
 
 **Source.** Inspired by Figure 4 of “Status of the ENUBET project”, J. Phys.: Conf. Ser. 1056 (2018) 012047.
+
+**Real measurement.** ENUBET Collaboration, “Status of the ENUBET project”, J. Phys.: Conf. Ser. 1056 (2018) 012047: [doi:10.1088/1742-6596/1056/1/012047](https://doi.org/10.1088/1742-6596/1056/1/012047).
 
 | File | Content |
 |---|---|
