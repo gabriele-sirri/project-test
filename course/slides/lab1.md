@@ -100,6 +100,53 @@ Reference: Cranmer, *Practical Statistics for the LHC*, arXiv:1503.07622
 
 ---
 
+# Notation: observables and parameters
+
+| | Letters | Examples | What it is |
+|---|---|---|---|
+| **Observable** (data) | Roman | $x$, $m$, $E$, $n$ | measured, event by event |
+| **Parameter** | Greek | $\mu$, $\sigma$, $\tau$, $\nu$, $\theta$ | unknown constant of the model |
+
+- $n$ = events **observed**, $\nu$ = events **expected**
+- A hat is an **estimate** from the data: $\hat\theta$ is the best-fit value
+- A subscript 0 is a fixed reference value: $\theta_0$ (true or hypothesised)
+- From Lab 2: $\mu$ = **parameter of interest**, $\theta$ = **nuisance parameters**
+- Careful: one letter can have two meanings ($\mu$ = mean of a Gaussian, or signal strength). **Always say what each symbol is.**
+
+---
+
+# A range for every variable, but not the same range
+
+| | Observable $x$ | Parameter $\theta$ |
+|---|---|---|
+| In RooFit | `RooRealVar("x","x", xmin, xmax)` | `RooRealVar("mean","mean", start, lo, hi)` |
+| You must give | the **range** | a **starting value** and an **allowed interval** (or fix it) |
+| What the range is | the domain where the pdf is **normalised**: $\int f\,dx = 1$ | a **bound for the minimiser**: it cannot leave it |
+| Events outside | **not in the fit** | not applicable |
+| The fit depends on it | **yes**: shape, normalisation, and (extended fit) the yields $N_s$, $N_b$ | **yes**: if the minimum is near a limit, or the interval is badly chosen |
+
+The range of an observable **defines the model**. The range of a parameter **steers the search**.
+
+---
+
+# Parameter limits: what can go wrong
+
+- **Too narrow**: the best fit sits on the boundary. The printout shows it, and the errors (HESSE, MINOS) are **not reliable** there
+- **Too wide**: slow or failed convergence, and unphysical regions ($\sigma \le 0$, negative yields)
+- **Start near the expected value**: the starting value is not the range
+- **Physical or numerical?** A limit like $\mu \ge 0$ is physics and can change the inference (Lab 3). A loose limit to help MIGRAD is numerics. **Say which one it is**
+- To keep a parameter out of the fit: `par.setConstant(True)`
+
+Try on the minimal program:
+
+```python
+sigma.setRange(0.1, 2)        # the true value, 3, is now outside: look at sigma and its error
+x.setRange("fit", -5, 5)      # a sub-range of the observable
+gauss.fitTo(data, Range="fit")  # what changes, and why?
+```
+
+---
+
 # Channels and processes
 
 Several **processes** (signal, backgrounds) contribute to one **channel**:

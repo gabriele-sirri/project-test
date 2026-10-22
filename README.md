@@ -58,8 +58,9 @@ Binder and Colab are fallback options: sessions are temporary, so download your 
 
 ## License
 
-Code, notebooks, slides and exercise texts: EUPL License (see [`LICENSE`](LICENSE)).
+Code, notebooks, slides and exercise texts: licensed under the EUPL-1.2 (European Union Public Licence, see [`LICENSE`](LICENSE)).
 
 Material in `third_party/`: LGPL 2.1, see the license in that folder.
 
-Data: each dataset keeps the license and terms of its original source<!--, given in the README of each case in `examples/`-->. Datasets digitised by hand from published figures or simulated for teaching are approximate and not official data releases.
+Data: each dataset keeps the license and terms of its original source, listed in [`DATA.md`](DATA.md).
+Datasets digitised by hand from published figures or simulated for teaching are approximate, and not official data releases.
