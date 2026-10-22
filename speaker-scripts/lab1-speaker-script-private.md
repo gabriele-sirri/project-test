@@ -2,57 +2,7 @@
 
 *Companion of lab1.md (the slides).*
 
-## How to use this script
-
-- Read the lines after **SAY**. The sentences are short and simple on purpose.
-- **IT** = riassunto in italiano, solo per te. Non va letto.
-- **\[PAUSE\]** = respira, guarda la classe, aspetta due secondi.
-- **\[DO\]** = azione da fare (cambiare slide, aprire il notebook).
-- Se ti perdi, riparti dalla frase in **grassetto**: è il messaggio chiave della slide.
-- Parla piano. Dieci secondi di silenzio dopo una domanda sono normali.
-
-## Survival phrases
-
-| Situation | Say | IT |
-| --- | --- | --- |
-| Start | Good morning everyone. Let's start. | Buongiorno, iniziamo |
-| Slow down | Let me say that again, more slowly. | Lo ripeto più piano |
-| Check | Is this clear? Any questions? | È chiaro? Domande? |
-| Did not understand | Sorry, could you repeat the question? | Puoi ripetere la domanda? |
-| Not sure | Good question. I will check and answer next time. | Controllo e rispondo la prossima volta |
-| Later | We will see this in Lab 2. | Lo vediamo nel Lab 2 |
-| Choose | Choose two of the three notebooks. | Scegliete 2 notebook su 3 |
-| Time | You have fifteen minutes. | Avete quindici minuti |
-| Help | Raise your hand and I will come to you. | Alzate la mano e vengo |
-| Look | Please look at the screen. | Guardate lo schermo |
-| Open | Open the notebook called ex A. | Aprite il notebook ex A |
-| Error | Do not worry, this error is normal. Let's read the message together. | Leggiamo l'errore insieme |
-| Break | Let's take a break. We restart at 10:35. | Pausa, si riparte alle 10:35 |
-| End | That's all for today. See you in two weeks. | Ci vediamo tra due settimane |
-
-## Pronunciation help (approximate)
-
-| Word | Say it like |
-| --- | --- |
-| likelihood | LIKE-li-hood |
-| Poisson | pwa-SON |
-| Gaussian | GOW-si-an (GOW as in cow) |
-| Breit–Wigner | BRITE VIG-ner |
-| nuisance | NYOO-sans |
-| parameter | pa-RAM-i-ter |
-| extended | ex-TEN-did |
-| background | BACK-ground |
-| RooFit | ROO-fit |
-| RooStats | ROO-stats |
-| MINUIT | MIN-you-it (or: mee-NWEE) |
-| MIGRAD | MY-grad |
-| HESSE | HESS-eh |
-| sigma | SIG-ma |
-| tau | TOW (as in cow) |
-| histogram | HIS-to-gram |
-| unbinned | un-BINND |
-| tutorial | tu-TOR-ee-al |
-| workspace | WORK-space |
+*How to use this script, survival phrases and pronunciation help are in `lab1-guide-and-phrases-private.md` and `lab1-pronunciation-private.md`.*
 
 ---
 
@@ -106,7 +56,7 @@
 
 *IT: Poisson per il numero di eventi (rate) × prodotto delle densità (shape). Se rate-only è un conteggio.*
 
-**SAY (to close):** If we only have the rate, we have a counting experiment. If we only care about the shape, we can ignore the number of events. Most real analyses use both. For the details, please read Cranmer, Practical Statistics for the LHC. The link is on the slide.
+**SAY (to close):** If we only have the rate, we have a counting experiment. If we only care about the shape, we can ignore the number of events. Most real analyses use both. For the details, please read Kyle Cranmer, Practical Statistics for the LHC. The link is on the slide.
 
 **\[DO\] slide 8 — Notation: observables and parameters**
 
@@ -132,15 +82,15 @@
 
 **\[DO\] slide 11 — Channels and processes**
 
-**SAY:** In a real measurement, several processes contribute to the same channel. For example, signal and background. The total expected number of events is the sum of the contributions. And the total shape is the weighted sum of the shapes. \[PAUSE\] Look at the table. LHCb, CUORE, IceCube, MAGIC. Different fields, different detectors. **But the mathematical structure is the same: signal plus background, in a mass, an energy, or an angle.** This is why one toolkit is enough for all of us.
+**SAY:** In a real measurement, several processes contribute to the same channel. For example, signal and background. The total expected number of events is the sum of the contributions. And the total shape is the weighted sum of the shapes. \[PAUSE\] Look at the table, and look at the physics. In LHCb, the signal is the decay of the B zero into a proton and an antiproton. The background is random proton–antiproton pairs. In CUORE, the signal is the neutrinoless double-beta decay of tellurium one-thirty, and the background is the natural radioactivity of the materials. In IceCube, the signal is the oscillation of the muon neutrinos, and the background is atmospheric muons and other neutrino flavours. In MAGIC, the signal is gamma rays, and the background is hadrons, from cosmic-ray showers. \[PAUSE\] Different fields, different detectors. **But the mathematical structure is the same: signal plus background, in a mass, an energy, or an angle.** This is why one toolkit is enough for all of us.
 
-*IT: processi nello stesso canale; esempi dalla tabella; stessa struttura in ogni campo.*
+*IT: processi nello stesso canale; per ogni esempio nomina il processo fisico (segnale e fondo); stessa struttura in ogni campo. Per IceCube il fondo è da confermare.*
 
 **\[DO\] slide 12 — Why RooFit?**
 
-**SAY:** Why do we use RooFit? RooFit is a toolkit to build, combine, fit and share probability models. The models are objects. You can combine them, and you do not need to rewrite the likelihood by hand. The model is stored in a workspace, and the workspace goes directly into RooStats and HistFactory. \[PAUSE\] I want to be honest. There are alternatives. iminuit and scipy are good for simple fits. zfit and pyhf are modern Python tools. **We use RooFit because it is the tool used in the experiments, and it covers the full chain, from the model to the final statistical result.**
+**SAY:** Why do we use RooFit? First, what it is. RooFit is a part of ROOT, the same ROOT that you know for histograms and trees. Together with RooStats and HistFactory, it is the statistical toolkit of ROOT. The links are on the slide. \[PAUSE\] RooFit builds, combines, fits and shares probability models. The models are objects. You can combine them, and you do not need to rewrite the likelihood by hand. **And there is one very important thing: the normalisation comes for free. RooFit normalises the pdf for you, and it takes everything into account: the limits of the range, the projections, the composite models. This saves a lot of work, and a lot of mistakes.** \[PAUSE\] The model is stored in a workspace, and the workspace goes directly into RooStats and HistFactory. The major LHC collaborations use RooFit. Mostly in an indirect way, inside bigger frameworks. \[PAUSE\] I want to be honest. There are alternatives. iminuit and scipy are good for simple fits. zfit and pyhf are modern Python tools. **We use RooFit because it is the tool behind the experiments, and it covers the full chain, from the model to the final statistical result.**
 
-*IT: motivazione onesta per RooFit; citare alternative; punto forte = catena completa + uso in collaborazione.*
+*IT: RooFit è un componente di ROOT (con RooStats e HistFactory, link in slide); normalizzazione gratis = punto chiave (range, proiezioni, modelli compositi); usato dalle collaborazioni LHC in modo indiretto; alternative onestamente; punto forte = catena completa.*
 
 ---
 
@@ -167,7 +117,7 @@
 
 **\[DO\] slide 15 — Exercise A**
 
-**SAY:** Now it is your turn. You have about fifty minutes. Exercise A1: create a Gaussian with mean zero and sigma one. Plot it. Then change sigma to three. Generate ten thousand unbinned events, fit, and plot. Exercise A2: create an exponential, with tau equal to four point five. Generate binned data, one thousand events, bin width zero point five. Fit and plot. \[PAUSE\] Please also answer the three questions in your notebook. First: are the fitted values compatible with the true ones? Second: what changes if you use only one hundred events? Third: why is the error on sigma different from the error on the mean? Work in pairs if you like. Raise your hand if you are stuck.
+**SAY:** Now it is your turn. You have about fifty minutes. Exercise A1: create a Gaussian with mean zero and sigma one. Plot it. Then change sigma to three. Generate ten thousand unbinned events, fit, and plot. Exercise A2: create an exponential, with tau equal to four point five. Generate binned data, one thousand events, bin width zero point five. Fit and plot. \[PAUSE\] Please also answer the three questions in your notebook. First: are the fitted values compatible with the true ones? Second: what changes if you use only one hundred events? Third: why is the error on sigma different from the error on the mean? Work in pairs if you like. Raise your hand if you are stuck. The references are on the slide: the ROOT tutorials rf101, rf201 and rf202.
 
 *IT: leggi le consegne; poi circola. Dopo 25 min chiedi: chi ha finito A1? Alla fine chiedi a un volontario di mostrare il grafico.*
 
@@ -192,7 +142,7 @@
 
 **\[DO\] slide 17 — Four objects to know**
 
-**SAY:** Welcome back. Now let me organise what you have just used. In RooFit there are four objects to know. \[PAUSE\] The first is RooRealVar. It is a variable or a parameter, with a range. The second is the pdf, the normalised density. For example the Gaussian, the exponential. The third is the dataset. It can be unbinned, a RooDataSet, or binned, a RooDataHist. The fourth is RooPlot, the frame where we draw data and model. \[PAUSE\] Three rules of thumb. Observables have a range. Parameters have a range and a start value. **And the pdf is normalised over the observable automatically.**
+**SAY:** Welcome back. Now let me organise what you have just used. In RooFit there are four objects to know. \[PAUSE\] The first is RooRealVar. It is a variable or a parameter, with a range. The second is the pdf, the normalised density. In practice we use concrete classes, for example RooGaussian and RooExponential. They all derive from one abstract class, RooAbsPdf, and this is why they all behave in the same way: you can fit them, generate from them, and plot them. We will meet other classes in the notebooks, when we need them. The third is the dataset. It can be unbinned, a RooDataSet, or binned, a RooDataHist. The fourth is RooPlot, the frame where we draw data and model. \[PAUSE\] Three rules of thumb. Observables have a range. Parameters have a range and a start value. **And the pdf is normalised over the observable automatically.**
 
 *IT: 4 oggetti, 3 regole. La normalizzazione automatica è il punto chiave.*
 
