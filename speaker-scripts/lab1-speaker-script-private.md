@@ -52,33 +52,33 @@
 
 **\[DO\] slide 7 — The marked Poisson model**
 
-**SAY:** Now the main formula of the morning. An experiment records n events. Each event has some measured features, for example a mass or an energy. We call these features the marks. \[PAUSE\] The probability of the whole experiment has two parts. The first part is a Poisson distribution for the number of events n. The second part is a product, over all events, of the density of the marks. **The first part is the rate. The second part is the shape.**
+**SAY:** Now the main formula of the morning. An experiment records n events. Each event has some measured features, for example a mass or an energy. We call these features the marks. \[PAUSE\] The probability of the whole experiment has two parts. The first part is a Poisson distribution for the number of events n. The second part is a product, over all events, of the density of the marks. **The first part is the rate, also called the yield. The second part is the shape.**
 
-*IT: Poisson per il numero di eventi (rate) × prodotto delle densità (shape). Se rate-only è un conteggio.*
+*IT: Poisson per il numero di eventi (rate, detto anche yield) × prodotto delle densità (shape). Se rate-only è un conteggio. Dire "yield" qui: la parola ricorre dopo.*
 
 **SAY (to close):** If we only have the rate, we have a counting experiment. If we only care about the shape, we can ignore the number of events. Most real analyses use both. For the details, please read Kyle Cranmer, Practical Statistics for the LHC. The link is on the slide.
 
 **\[DO\] slide 8 — Notation: observables and parameters**
 
-**SAY:** Before we go on, a few words about notation. It looks like a detail, but it avoids many mistakes. \[PAUSE\] **Roman letters are observables, the data: x, m, E, n.** **Greek letters are parameters, the unknown constants of the model: mu, sigma, tau, nu, theta.** Look at the first two: n is the number of events we observe. Nu is the number of events we expect. They are not the same. \[PAUSE\] A hat means an estimate from the data: theta hat is the best-fit value. A subscript zero is a fixed reference value, for example the true value. From Lab 2 you will also hear parameter of interest and nuisance parameters. **One warning: the same letter can mean two things. Mu is the mean of a Gaussian, but also the signal strength. Always tell me what each symbol is, in the exercises and at the exam.**
+**SAY:** Before we go on, a few words about notation. It looks like a detail, but it avoids many mistakes. \[PAUSE\] **Roman letters are observables, the data: x, m, E, n.** **Greek letters are parameters, the unknown constants of the model: mu, sigma, tau, nu, theta.** Look at the first two: n is the number of events we observe. Nu is the number of events we expect. They are not the same. \[PAUSE\] A hat means an estimate from the data: theta hat is the best-fit value. A subscript zero is a fixed reference value, for example the true value. Look at the Gaussian on the slide. First x, then a semicolon, then mu and sigma. The semicolon separates the variable from the parameters. From Lab 2 you will also hear parameter of interest and nuisance parameters. **One warning: the same letter can mean two things. Mu is the mean of a Gaussian, but also the signal strength. Always tell me what each symbol is, in the exercises and at the exam.**
 
 *IT: lettere romane = osservabili/dati; greche = parametri; n osservati, nu attesi; cappello = stima; pedice 0 = valore di riferimento; attenzione allo stesso simbolo con due significati.*
 
-**Ask the class:** In a Gaussian, which symbols are observables and which are parameters? **Expected answer:** x is the observable; mean and sigma are the parameters. **If nobody answers, SAY:** x is what we measure, event by event. Mean and sigma are what we want to find.
+**Ask the class:** Look at the Gaussian formula. Which symbols are observables and which are parameters? **Expected answer:** x is the observable; mean and sigma are the parameters. **If nobody answers, SAY:** x is what we measure, event by event. Mean and sigma are what we want to find.
 
 **\[DO\] slide 9 — A range for every variable, but not the same range**
 
-**SAY:** Now an important point, and RooFit forces us to think about it. Every variable needs a range. But the range does not mean the same thing. \[PAUSE\] For an observable, the range is the domain of the pdf. The pdf is normalised on this range: the integral is one. Events outside the range are not in the fit. So the range is part of the model. **If you change the range of an observable, you change the model.** In an extended fit, even the yields change, because the yield is the number of events in the range. \[PAUSE\] For a parameter, we give a starting value and an allowed interval. The interval is only a bound for the minimiser. It does not change the function. But the fit still depends on it, especially if the best value is near a limit. **The range of an observable defines the model. The range of a parameter steers the search.**
+**SAY:** Now an important point, and RooFit forces us to think about it. Every variable needs a range. But the range does not mean the same thing. \[PAUSE\] For an observable, the range is the domain of the pdf. The pdf is normalised on this range: the integral is one. Events outside the range are not in the fit. So the range is part of the model. **If you change the range of an observable, you change the model.** In a counting experiment, the rate changes too, because the expected number of events is the number of events inside the range. \[PAUSE\] For a parameter, we give a starting value and an allowed interval. The interval is only a bound for the minimiser. It does not change the function. But the fit still depends on it, especially if the best value is near a limit. **The range of an observable defines the model. The range of a parameter steers the search.**
 
-*IT: osservabile: range = dominio dove la pdf è normalizzata; eventi fuori non entrano; nei fit estesi cambiano le rese. Parametro: valore iniziale + intervallo = limiti per il minimizzatore; non cambia la funzione ma il fit ne dipende.*
+*IT: osservabile: range = dominio dove la pdf è normalizzata; eventi fuori non entrano; in un esperimento di conteggio cambia il rate. Parametro: valore iniziale + intervallo = limiti per il minimizzatore; non cambia la funzione ma il fit ne dipende.*
 
-**Ask the class:** In an extended fit, I make the mass range smaller. Does N signal change? Why? **Expected answer:** yes, N is the number of events inside the range. **If nobody answers, SAY:** The yield is defined inside the range of the observable. A smaller range, fewer events.
+**Ask the class:** I make the mass range smaller. Does the expected number of signal events change? Why? **Expected answer:** yes, N is the number of events inside the range. **If nobody answers, SAY:** The rate is defined inside the range of the observable. A smaller range, fewer events.
 
 **\[DO\] slide 10 — Parameter limits: what can go wrong**
 
-**SAY:** Let me give you the typical problems. If the interval is too narrow, the best value sits on the boundary. You see it in the printout. And the errors are not reliable there, neither HESSE nor MINOS. \[PAUSE\] If the interval is too wide, the fit is slow, or it fails. Or it goes to a region without physics, for example a negative sigma, or negative yields. Start near the value you expect. The starting value is not the range. \[PAUSE\] And one more question: is your limit physical or numerical? A limit like mu greater than zero is physics. In Lab 3 you will see that it can change the inference. A loose limit that helps MIGRAD is only numerics. **Say which one it is.** If you do not want to fit a parameter, fix it with set constant.
+**SAY:** What happens inside fit to? It calls a minimiser, called MINUIT. It moves the parameters inside the intervals that you gave, and it returns the best values and the errors. We study MINUIT in detail in Lab 2. \[PAUSE\] Now the typical problems. If the interval is too narrow, the best value sits on the boundary. You see it in the printout. And the errors are not reliable there. If the interval is too wide, the fit is slow, or it fails. Or it goes to a region without physics, for example a negative sigma, or a negative number of events. RooFit also warns you when a parameter has no bounds, for example a width. Please read the warnings. \[PAUSE\] Start near the value you expect. The starting value is not the range. \[PAUSE\] And one more question: is your limit physical or numerical? A limit like mu greater than zero is physics. In Lab 3 you will see that it can change the result. A limit only to avoid silly values, like sigma greater than zero, is numerics. It must not touch the best value. **Say which one it is.** If you do not want to fit a parameter, fix it with set constant.
 
-*IT: troppo stretto = best fit sul bordo, errori non affidabili; troppo largo = convergenza lenta o regioni non fisiche; partire vicino al valore atteso; limite fisico (mu ≥ 0) vs numerico; setConstant per fissare.*
+*IT: fitTo chiama MINUIT (dettagli nel Lab 2); troppo stretto = best fit sul bordo, errori non affidabili; troppo largo = convergenza lenta o regioni non fisiche; RooFit avvisa se un parametro non ha limiti; partire vicino al valore atteso; limite fisico (mu ≥ 0) vs numerico; setConstant per fissare. Non nominare HESSE/MINOS/MIGRAD qui.*
 
 **\[DO\] slide 11 — Channels and processes**
 
@@ -100,7 +100,7 @@
 
 **SAY while typing:** Now we write a complete RooFit program. It is short. \[PAUSE\]
 
-- First, we import ROOT.
+- First, we import ROOT. In a notebook, we switch on JSROOT with percent jsroot on, otherwise Binder shows nothing.
 - We create the variable x, from minus ten to ten. This is the observable.
 - We create the mean, with start value zero. The two numbers after are the limits.
 - We create sigma, with start value three.
@@ -113,11 +113,11 @@
 
 **SAY (after the plot):** The fit gives a mean close to zero and a sigma close to three. \[PAUSE\] Is this a surprise? No, because we generated the data with these values. This is a toy: **we know the truth, so we can test our method.**
 
-**\[DO\] Live demo (3 min), right after the live coding of slide 14: ranges in practice.** Set sigma range to 0.1 and 2, and refit. The true value is 3. **Expected:** sigma stops very close to 2, at the boundary. Do not trust its error. Then restore the range, set the sub-range of x, minus 5 to 5, and fit with Range equal to "fit". **Expected:** results close to the first fit, but the errors get larger, because there are fewer events. Ask: why?
+**\[DO\] Try it (3–5 min), the last bullet of slide 14: ranges in practice.** Ask the students to refit twice, as on the slide: first with sigma range 0.1 to 2, then with the sub-range of x, minus 5 to 5, and fit with Range equal to "fit". They compare the best values and the errors with the first fit. Then show it on the screen. **Expected (to verify on your machine before the lab):** with the narrow limit, sigma stops at the boundary, very close to 2, and its error is meaningless: it can be tiny or zero. The fit does not complain loudly. With the sub-range, the values stay compatible with the first fit, but the errors are larger, because there are fewer events. Ask: why? **Note:** I tested the idea with iminuit, not with RooFit: sigma stopped at 2.000 with error 0.000, and the errors with the sub-range were larger.
 
 **\[DO\] slide 15 — Exercise A**
 
-**SAY:** Now it is your turn. You have about fifty minutes. Exercise A1: create a Gaussian with mean zero and sigma one. Plot it. Then change sigma to three. Generate ten thousand unbinned events, fit, and plot. Exercise A2: create an exponential, with tau equal to four point five. Generate binned data, one thousand events, bin width zero point five. Fit and plot. \[PAUSE\] Please also answer the three questions in your notebook. First: are the fitted values compatible with the true ones? Second: what changes if you use only one hundred events? Third: why is the error on sigma different from the error on the mean? Work in pairs if you like. Raise your hand if you are stuck. The references are on the slide: the ROOT tutorials rf101, rf201 and rf202.
+**SAY:** Now it is your turn. You have about fifty minutes. Exercise A1: create a Gaussian with mean zero and sigma one. Plot it. Then change sigma to three. Generate ten thousand unbinned events, fit, and plot. Exercise A2: create an exponential, with tau equal to four point five. Generate binned data, one thousand events, bin width zero point five. Fit and plot. \[PAUSE\] Please also answer the three questions in your notebook. First: are the fitted values compatible with the true ones? Second: what changes if you use only one hundred events? Third: why is the error on sigma different from the error on the mean? Work in pairs if you like. Raise your hand if you are stuck. The reference is on the slide: the ROOT RooFit tutorials, in C++ and in Python. If you finish early, there is an optional step A3, on the ranges.
 
 *IT: leggi le consegne; poi circola. Dopo 25 min chiedi: chi ha finito A1? Alla fine chiedi a un volontario di mostrare il grafico.*
 
@@ -148,9 +148,9 @@
 
 **\[DO\] slide 18 — Unbinned vs binned**
 
-**SAY:** Now, two kinds of likelihood. In the unbinned case we use every event. The minus log likelihood is the sum, over events, of the minus log of the density. In the binned case, we have a histogram. In each bin the number of events is Poisson, with an expected value that depends on the parameters. \[PAUSE\] A very important point. **A binned likelihood is not a chi-square fit.** It is exact for low counts, and it works also with empty bins. Binned fits lose information if the bins are wide. Unbinned fits are slow if you have very many events. In RooFit the pdf and the code are the same. Only the dataset type changes.
+**SAY:** Now, two kinds of likelihood. In the unbinned case we use every event. The minus log likelihood is the sum, over events, of the minus log of the density. In the binned case, we have a histogram. In each bin, the number of events is Poisson. We call n j the observed number and nu j the expected number, which depends on the parameters. \[PAUSE\] A very important point. **A binned likelihood is not a chi-square fit.** It is exact for low counts, and it works also with empty bins. Binned fits lose information if the bins are wide. Unbinned fits are slow if you have very many events. And in RooFit, the pdf and the code are the same. Only the dataset changes: RooDataSet for the unbinned case, RooDataHist for the binned case.
 
-*IT: binned ≠ chi-quadro. Stesso codice, cambia il dataset.*
+*IT: binned ≠ chi-quadro. In RooFit: stesso codice, cambia il dataset (RooDataSet / RooDataHist). Se chiedono perché non un chi-quadro, usa le slide di backup (lab1_backup.md): Pearson/Neyman/Poisson, grandi numeri, bin vuoti e bias, Wilks; riferimento Baker e Cousins 1984.*
 
 **Ask the class:** When would you prefer a binned fit? **Possible answers:** very large data samples; templates from simulation; combining many channels (this is what HistFactory does, Lab 4).
 
@@ -184,9 +184,9 @@
 
 **\[DO\] slide 21 — Adding pdfs**
 
-**SAY:** Now the last topic: signal plus background. We add two pdfs. There are two ways. \[PAUSE\] The first is shape-only. We use a fraction. The total number of events is fixed by the data. The second is extended. We use the yields, N signal and N background. In the extended case, the number of events is Poisson, and the yield is a parameter of the fit. **This is exactly the marked Poisson model from the beginning of the morning, written in code.** \[PAUSE\] In RooFit we use RooAddPdf. We give two lists: the pdfs, and the yields. And to plot only the background, we use Components equals bkg.
+**SAY:** Now the last topic: signal plus background. We add two pdfs, with RooAddPdf. We give two lists: the pdfs, and the coefficients. **The number of coefficients tells RooFit what you mean.** \[PAUSE\] With one coefficient for each pdf, the coefficients are the numbers of events, N signal and N background. This is the extended case. The number of events is Poisson, and it is a parameter of the fit. **This is exactly the marked Poisson model from the beginning of the morning, written in code.** You do not need to tell the fit that it is extended: RooFit sees it from the number of coefficients. \[PAUSE\] With one coefficient fewer, the coefficients are fractions, and the last fraction is one minus the sum of the others. This is the shape-only case. The total number of events is fixed by the data. \[PAUSE\] And to plot only the background, we use Components equals bkg.
 
-*IT: frazioni vs yield; extended = marked Poisson; RooAddPdf; Components per plottare il fondo.*
+*IT: N coefficienti per N pdf = numeri di eventi = esteso (marked Poisson, non serve dirlo al fit); N−1 coefficienti = frazioni, l'ultima è 1−somma = solo forma; Components per plottare il fondo.*
 
 **\[DO\] slide 22 — RDataFrame in one slide**
 
